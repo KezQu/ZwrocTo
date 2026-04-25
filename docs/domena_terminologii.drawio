@@ -1,0 +1,643 @@
+<mxfile host="65bd71144e">
+    <diagram name="ButelkoGrapa - Domena Terminologii" id="terminology-domain">
+        <mxGraphModel dx="1434" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="2000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="root" value="ZwróćTo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="960" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="mapa" value="Mapa butelkomatów" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="920" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="profil" value="Profil użytkownika" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1540" y="1082.5" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zgloszenia" value="Zgłoszenia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1410" y="820" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="promocje" value="Nagrody" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1680" y="960" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-root-mapa" parent="1" source="root" target="mapa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-root-profil" parent="1" source="root" target="profil" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-root-zgloszenia" parent="1" source="root" target="zgloszenia" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-root-promocje" parent="1" source="root" target="promocje" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-9" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;shadow=0;" parent="1" source="but-godziny" target="Q80rckp8HsnqE0JuAOmF-11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="805.625" y="769.9999999999998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="butelkomaty" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Butelkomaty&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="969.32" y="840" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="filtry" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Filtry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="1032.5" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-mapa-butelkomaty" parent="1" source="mapa" target="butelkomaty" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1038.2352941176468" y="875" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-mapa-filtry" parent="1" source="mapa" target="filtry" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1036" y="935" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="but-nazwa" value="Nazwa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="785" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="but-status" value="Status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="969.32" y="752.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="but-godziny" value="Informacje" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="770" width="90" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="but-zwrot" value="Zwrot kaucji" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="765" y="835" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-7" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="but-komentarze" target="Q80rckp8HsnqE0JuAOmF-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="but-komentarze" value="Komentarze" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="805" y="890" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-nazwa" parent="1" source="butelkomaty" target="but-nazwa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-status" parent="1" source="butelkomaty" target="but-status" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-opakowania" parent="1" source="butelkomaty" target="but-opakowania" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-godziny" parent="1" source="butelkomaty" target="but-godziny" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-zwrot" parent="1" source="butelkomaty" target="but-zwrot" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-but-komentarze" parent="1" source="butelkomaty" target="but-komentarze" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-dziala" value="Działa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1094.32" y="715" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-zapelniony" value="Zapełniony" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1015" y="680" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-awaria" value="Awaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="915" y="702.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-status-dziala" style="shadow=0;" parent="1" source="but-status" target="status-dziala" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-status-zapelniony" style="shadow=0;" parent="1" source="but-status" target="status-zapelniony" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-status-awaria" style="shadow=0;" parent="1" source="but-status" target="status-awaria" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwrot-kod" value="Kod kreskowy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="680" y="770" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwrot-gotowka" value="Gotówka" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="620" y="820" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwrot-bon" value="Bon rabatowy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="615" y="870" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwrot-kod" parent="1" source="but-zwrot" target="zwrot-kod" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwrot-gotowka" parent="1" source="but-zwrot" target="zwrot-gotowka" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwrot-bon" parent="1" source="but-zwrot" target="zwrot-bon" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;curved=0;" edge="1" parent="1" source="filtr-typ" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="950" y="1113"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="filtr-typ" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Typ opakowania&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="855" y="1150" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="filtr-dzialajace" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Tylko działające&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="695" y="1150" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-filtr-typ" parent="1" source="Q80rckp8HsnqE0JuAOmF-35" target="filtr-typ" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-filtr-dzialajace" parent="1" source="Q80rckp8HsnqE0JuAOmF-35" target="filtr-dzialajace" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-5" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="statystyki" target="KUyh2Y2xa6NWSP7azSba-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="statystyki" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Statystyki&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" parent="1" vertex="1">
+                    <mxGeometry x="1464.32" y="1288.6200000000001" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="portfel" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Portfel&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1540" y="1369.9999999999998" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="slad" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ślad węglowy&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1670" y="1325" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="odznaki" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Odznaki&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1740" y="1238.62" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ranking" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ranking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1810" y="1170" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-profil-statystyki" parent="1" source="profil" target="statystyki" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1410" y="1300" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-profil-portfel" parent="1" source="profil" target="portfel" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1637" y="1188" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-profil-slad" parent="1" source="profil" target="slad" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1653.3168316831684" y="1187.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-profil-odznaki" parent="1" source="profil" target="odznaki" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1672.945205479452" y="1187.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-profil-ranking" parent="1" source="profil" target="ranking" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1723" y="1187.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="stat-oddane" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Oddane opakowania&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1299.32" y="1278.62" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="stat-zarobione" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Zarobione na kaucjach&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1219.32" y="1375" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="stat-co2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;CO2 zaoszczędzone&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1309.32" y="1463.88" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="stat-energia" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Energia zaoszczędzona&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1234.32" y="1420" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-stat-oddane" parent="1" source="statystyki" target="stat-oddane" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-stat-zarobione" parent="1" source="statystyki" target="stat-zarobione" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-stat-co2" parent="1" source="statystyki" target="stat-co2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-stat-energia" style="entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="statystyki" target="stat-energia" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwroty-puszki" value="Puszki aluminiowe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=light-dark(#D6B656,#D6B656);fontSize=12;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1109.3200000000002" y="1227.5" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwroty-szklo" value="Butelki szklane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1035" y="1160" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zwroty-zwrotne" value="Szkło zwrotne 1,5L" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1290" y="1200" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwroty-puszki" parent="1" source="2" target="zwroty-puszki" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwroty-szklo" parent="1" source="2" target="zwroty-szklo" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zwroty-zwrotne" parent="1" source="2" target="zwroty-zwrotne" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="portfel-saldo" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Saldo&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1460" y="1441.38" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="portfel-historia" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Historia transakcji&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1474.32" y="1488.88" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-portfel-saldo" parent="1" source="portfel" target="portfel-saldo" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1516.8595161760418" y="1598.88" as="targetPoint"/>
+                        <mxPoint x="1580" y="1441" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-portfel-historia" parent="1" source="portfel" target="portfel-historia" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1599.3617021276596" y="1441.38" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slad-co2" value="CO2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1730" y="1462.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="slad-porown" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Porównanie zaoszczędzonej energii&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1765" y="1411.38" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-slad-co2" parent="1" source="slad" target="slad-co2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-slad-porown" parent="1" source="slad" target="slad-porown" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1685.6172839506175" y="1615" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="porown-km" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Kilometry samochodu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=9" parent="1" vertex="1">
+                    <mxGeometry x="1900" y="1470" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="porown-laptop" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Godziny pracy laptopa&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=9" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="1425" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="porown-drzewa" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Drzewa pochłaniające CO2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=9" parent="1" vertex="1">
+                    <mxGeometry x="1985" y="1366.38" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-porown-km" parent="1" source="slad-porown" target="porown-km" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-porown-laptop" parent="1" source="slad-porown" target="porown-laptop" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-porown-drzewa" parent="1" source="slad-porown" target="porown-drzewa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="odznaki-zdobyte" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Zdobyte&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1880" y="1308.62" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="odznaki-dozdobycia" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Do zdobycia&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1830" y="1355" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-odznaki-zdobyte" parent="1" source="odznaki" target="odznaki-zdobyte" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-odznaki-dozdobycia" parent="1" source="odznaki" target="odznaki-dozdobycia" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1861.610169491525" y="1443.62" as="sourcePoint"/>
+                        <mxPoint x="1846.6949152542375" y="1553.62" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ranking-pozycja" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Pozycja&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1950" y="1132.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ranking-nazwa" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Nazwa użytkownika&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1990" y="1180" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ranking-zwroty" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Liczba zwrotów&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1970" y="1232.5" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ranking-co2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;CO2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1890" y="1252.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-ranking-pozycja" parent="1" source="ranking" target="ranking-pozycja" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-ranking-nazwa" parent="1" source="ranking" target="ranking-nazwa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-ranking-zwroty" parent="1" source="ranking" target="ranking-zwroty" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-ranking-co2" parent="1" source="ranking" target="ranking-co2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="formularz" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Formularz zgłoszenia&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1530" y="715" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lista-zgloszen" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Lista zgłoszeń&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1344.32" y="715" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zgloszenia-formularz" parent="1" source="zgloszenia" target="formularz" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-zgloszenia-lista" parent="1" target="lista-zgloszen" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1480.6836363636364" y="820" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;" edge="1" parent="1" source="form-typ" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1560" y="570"/>
+                            <mxPoint x="1200" y="570"/>
+                            <mxPoint x="1200" y="880"/>
+                            <mxPoint x="1310" y="880"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="form-typ" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Typ opakowania&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1510" y="660" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="form-ilosc" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Ilość&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="722.5" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="form-lokalizacja" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Lokalizacja&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1665" y="785" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="form-opis" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Opis&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1650" y="665" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-form-typ" parent="1" source="formularz" target="form-typ" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-form-ilosc" parent="1" source="formularz" target="form-ilosc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-form-lokalizacja" parent="1" source="formularz" target="form-lokalizacja" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-form-opis" parent="1" source="formularz" target="form-opis" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lista-lokalizacja" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Lokalizacja&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1234.32" y="635" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lista-autor" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Autor&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1394.32" y="645" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1309.32" y="818.75" as="sourcePoint"/>
+                        <mxPoint x="1309.32" y="1081.25" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1309.32" y="878.75"/>
+                            <mxPoint x="1309.32" y="878.75"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lista-typ" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Typ opakowania&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1249.32" y="790" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lista-ilosc" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Ilość&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1219.32" y="732.5" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lista-data" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1229.32" y="685" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-lokalizacja" parent="1" source="lista-zgloszen" target="lista-lokalizacja" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-opis" parent="1" source="lista-zgloszen" target="lista-opis" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-autor" parent="1" source="lista-zgloszen" target="lista-autor" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-typ" parent="1" source="lista-zgloszen" target="lista-typ" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-ilosc" parent="1" source="lista-zgloszen" target="lista-ilosc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-lista-data" parent="1" source="lista-zgloszen" target="lista-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="promo-warunek" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Aktywna&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="2120" y="1102.5" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="promo-status" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Wygasła&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="2125" y="1042.5" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-promo-nazwa" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2030" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-promo-oferta" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-promo-warunek" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-promo-status" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-promo-lokalizacja" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-24" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2130" y="1036.96875" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-promo-wazna" parent="1" source="promocje" target="lgRzgy5UjlOMIKMfM8P0-21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2219.3150684931506" y="1170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-promo-status-aktywna" style="" parent="1" source="lgRzgy5UjlOMIKMfM8P0-24" target="promo-warunek" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2260" y="1009.730769230769" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-promo-status-wygasla" parent="1" source="lgRzgy5UjlOMIKMfM8P0-24" target="promo-status" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2260" y="1028.9615384615386" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="stat-energia" target="stat-energia" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-7" value="" parent="1" source="butelkomaty" target="but-opakowania" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="855" y="795" as="sourcePoint"/>
+                        <mxPoint x="62" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;curved=0;" edge="1" parent="1" source="but-opakowania" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="920" y="1010"/>
+                            <mxPoint x="1310" y="1010"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="but-opakowania" value="Przyjmowane opakowania" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="940" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-20" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Nazwa sklepu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1680" y="860" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-21" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Lokalizacja sklepu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1825" y="825" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-22" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Warunki otrzymania nagrody&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1960" y="960" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-23" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Dostępne nagrody&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1965" y="880" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-24" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Status&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1935" y="1050" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-25" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ważna do&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1780" y="1082.5" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lgRzgy5UjlOMIKMfM8P0-34" value="" parent="1" source="2" target="zwroty-pet" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1252" y="1475" as="sourcePoint"/>
+                        <mxPoint x="1179" y="1695" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zwroty-pet" value="Butelki PET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1394.3200000000002" y="1112.5" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-5" value="Treść" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="705" y="910" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-6" value="Autor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="780" y="950" width="55" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-8" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="but-komentarze" target="Q80rckp8HsnqE0JuAOmF-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="941" y="950" as="sourcePoint"/>
+                        <mxPoint x="915" y="1010" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-11" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Godziny otwarcia&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="675" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-12" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Lokalizacja&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="730" y="722.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-13" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;shadow=0;" parent="1" source="but-godziny" target="Q80rckp8HsnqE0JuAOmF-12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="894" y="775" as="sourcePoint"/>
+                        <mxPoint x="795" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-18" value="Zgłoszenia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="1032.5" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-19" parent="1" source="filtry" target="Q80rckp8HsnqE0JuAOmF-18" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="582" y="1200" as="sourcePoint"/>
+                        <mxPoint x="480" y="1252" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-29" value="Ilość opakowań&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="615" y="1020" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-32" value="Tylko zgłoszenia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="660" y="1082.5" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-33" parent="1" source="Q80rckp8HsnqE0JuAOmF-18" target="Q80rckp8HsnqE0JuAOmF-29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="1330" as="sourcePoint"/>
+                        <mxPoint x="300" y="1445" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-34" parent="1" source="Q80rckp8HsnqE0JuAOmF-18" target="Q80rckp8HsnqE0JuAOmF-32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="1390" as="sourcePoint"/>
+                        <mxPoint x="530" y="1505" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-35" value="Butelkomaty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="795" y="1102.5" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q80rckp8HsnqE0JuAOmF-37" parent="1" source="filtry" target="Q80rckp8HsnqE0JuAOmF-35" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="889" y="1200" as="sourcePoint"/>
+                        <mxPoint x="770" y="1272" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Wypłać środki&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1640" y="1510" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-3" style="" parent="1" source="portfel" target="KUyh2Y2xa6NWSP7azSba-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1628.0851063829787" y="1441.38" as="sourcePoint"/>
+                        <mxPoint x="1515" y="1843.88" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;" edge="1" parent="1" source="KUyh2Y2xa6NWSP7azSba-4" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1264" y="1310"/>
+                            <mxPoint x="1264" y="1310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-4" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Zwroty według&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;typu&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=12;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1229.32" y="1320" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Zeskanuj kupon&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1510" y="1540" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="KUyh2Y2xa6NWSP7azSba-9" style="entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="portfel" target="KUyh2Y2xa6NWSP7azSba-8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1613.8461538461538" y="1441.38" as="sourcePoint"/>
+                        <mxPoint x="1465" y="1788.88" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Typy o&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;pakowań&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="1174.32" y="1082.5" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" edge="1" parent="1" source="root" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1488" y="1163" as="sourcePoint"/>
+                        <mxPoint x="1284" y="1435" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" edge="1" parent="1" source="lista-zgloszen" target="lista-opis">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1395" y="715" as="sourcePoint"/>
+                        <mxPoint x="1365" y="630" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lista-opis" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Opis&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1334.32" y="600" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Rabat&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="2140" y="825" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" edge="1" parent="1" target="14" source="lgRzgy5UjlOMIKMfM8P0-23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2282.5" y="787.7115384615386" as="targetPoint"/>
+                        <mxPoint x="2077.5" y="827.75" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Promocja&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="2147.5" y="935" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" edge="1" parent="1" target="16" source="lgRzgy5UjlOMIKMfM8P0-23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2345" y="836.4615384615386" as="targetPoint"/>
+                        <mxPoint x="2140" y="876.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Bon zakupowy&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="2012.5" y="805" width="107.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" edge="1" parent="1" target="18" source="lgRzgy5UjlOMIKMfM8P0-23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2197.5" y="711.4615384615386" as="targetPoint"/>
+                        <mxPoint x="1992.5" y="751.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Voucher&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="2170" y="880" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" edge="1" parent="1" source="lgRzgy5UjlOMIKMfM8P0-23" target="20">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2155" y="930" as="targetPoint"/>
+                        <mxPoint x="2105" y="923" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
