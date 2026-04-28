@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .logo-transparent {
+    width: 250px;
+    height: auto;
+    max-width: 80vw;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo-transparent {
+    width: 250px;
+    height: auto;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.logo-transparent {
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* test change */

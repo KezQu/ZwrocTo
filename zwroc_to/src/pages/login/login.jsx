@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Logo from "../../components/logo";
+import Logo from "../../components/logo/logo";
+import "./login.css";
 
 function LoginForm() {
   const login_action = (e) => {
@@ -7,47 +8,56 @@ function LoginForm() {
     const formData = new FormData(e.target);
 
     const email = formData.get("email");
-    // const password = formData.get("password");
-
-    console.log(`Login user: ${email}`);
+    console.log(`Login user: ${email} dupa`);
   };
+
   return (
-    <form onSubmit={login_action}>
-      <p>E-MAIL</p>
+    <form onSubmit={login_action} className="login-form">
+      <label className="form-label">E-MAIL</label>
       <input
+        className="form-input"
         id="email"
         name="email"
         placeholder="Wpisz swój e-mail"
         type="email"
         required
       />
-      <br />
-      <p>HASŁO</p>
+
+      <label className="form-label">HASŁO</label>
       <input
+        className="form-input"
         id="password"
         name="password"
         placeholder="Wpisz hasło"
         type="password"
         required
       />
-      <br />
-      <Link to="/restore_password"> ZAPOMNIAŁEŚ HASŁA?</Link>
-      <br />
-      <button type="submit">Login</button>
+
+      <div className="forgot-password">
+        <Link to="/restore_password">ZAPOMNIAŁEŚ HASŁA?</Link>
+      </div>
+
+      <button type="submit" className="login-button">
+        Zaloguj się →
+      </button>
     </form>
   );
 }
 
 export default function Login() {
   return (
-    <div>
-      <Logo />
-      <div>
-        <h2>Zaloguj się</h2>
+    <div className="login-page">
+      <div className="logo-container">
+        <Logo />
+      </div>
+
+      <div className="login-card">
+        <h2 className="login-title">Zaloguj się</h2>
         <LoginForm />
       </div>
-      <div>
-        <text>Nie masz konta? </text>
+
+      <div className="register-section">
+        <span>Nie masz konta? </span>
         <Link to="/register">Zarejestruj się</Link>
       </div>
     </div>
