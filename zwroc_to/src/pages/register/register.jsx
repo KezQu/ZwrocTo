@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../components/logo/logo";
+import "./register.css";
 
 function RegisterForm() {
   const register_action = (e) => {
@@ -21,36 +22,37 @@ function RegisterForm() {
   };
 
   return (
-    <form onSubmit={register_action}>
-      <p>IMIĘ</p>
+    <form onSubmit={register_action} className="register-form">
+      <label className="form-label">IMIĘ</label>
       <input
+        className="form-input"
         id="name"
         name="name"
         placeholder="Wpisz swoje imię"
         type="text"
         required
       />
-      <br />
-      <p>E-MAIL</p>
+      <label className="form-label">E-MAIL</label>
       <input
+        className="form-input"
         id="email"
         name="email"
         placeholder="Wpisz swój e-mail"
         type="email"
         required
       />
-      <br />
-      <p>HASŁO</p>
+      <label className="form-label">HASŁO</label>
       <input
+        className="form-input"
         id="password"
         name="password"
         placeholder="Wpisz hasło"
         type="password"
         required
       />
-      <br />
-      <p>POWTÓRZ HASŁO</p>
+      <label className="form-label">POWTÓRZ HASŁO</label>
       <input
+        className="form-input"
         id="confirmPassword"
         name="confirmPassword"
         placeholder="Wpisz ponownie hasło"
@@ -58,21 +60,27 @@ function RegisterForm() {
         required
       />
       <br />
-      <button type="submit">Zarejestruj się</button>
+      <button type="submit" className="register-button">
+        Zarejestruj się
+      </button>
     </form>
   );
 }
 
 export default function Register() {
   return (
-    <div>
-      <Logo />
-      <div>
-        <h2>Zarejestruj się</h2>
+    <div className="register-page">
+      <div className="logo-container">
+        <Logo />
+      </div>
+
+      <div className="register-card">
+        <h2 className="register-title">Zarejestruj się</h2>
         <RegisterForm />
       </div>
-      <div>
-        <text>Masz już konto? </text>
+
+      <div className="login-section">
+        <span>Masz już konto? </span>
         <Link to="/login">Zaloguj się</Link>
       </div>
     </div>

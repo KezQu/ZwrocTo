@@ -8,7 +8,7 @@ function LoginForm() {
     const formData = new FormData(e.target);
 
     const email = formData.get("email");
-    console.log(`Login user: ${email} dupa`);
+    console.log(`Login user: ${email}`);
   };
 
   return (
