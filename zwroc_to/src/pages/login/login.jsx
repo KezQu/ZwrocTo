@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../components/logo/logo";
 import "./login.css";
 
 function LoginForm() {
+  const navigate = useNavigate();
+
   const login_action = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
     const email = formData.get("email");
     console.log(`Login user: ${email}`);
+
+    console.log(`Login successful navigating to home page`);
+    navigate("/");
   };
 
   return (

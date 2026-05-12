@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../components/logo/logo";
 import "./register.css";
 
 function RegisterForm() {
+  const navigate = useNavigate();
+
   const register_action = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -19,6 +21,9 @@ function RegisterForm() {
     }
 
     console.log(`Creating account for: ${name}: ${email}`);
+
+    console.log(`Register successful navigating to login page`);
+    navigate("/login");
   };
 
   return (
