@@ -12,8 +12,8 @@ function LoginForm() {
     const email = formData.get("email");
     console.log(`Login user: ${email}`);
 
-    console.log(`Login successful navigating to home page`);
-    navigate("/");
+    console.log(`Login successful navigating to map`);
+    navigate("/map");
   };
 
   return (

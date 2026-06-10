@@ -1,9 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
-import Home from "./pages/home/home";
 import RestorePassword from "./pages/restore_password/restore_password";
 import Profile from "./pages/profile/profile";
+import MapScreen from "./pages/map/map";
+import Portfel from "./pages/portfel/portfel";
+import Nagrody from "./pages/nagrody/nagrody";
+import ScanCoupon from "./pages/scan_coupon/scan_coupon";
 
 function App() {
   return (
@@ -11,11 +14,16 @@ function App() {
       <div className="app-layout">
         <div className="app-main">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/map" replace />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/restore_password" element={<RestorePassword />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/map" element={<MapScreen />} />
+            <Route path="/automaty" element={<MapScreen />} />
+            <Route path="/portfel" element={<Portfel />} />
+            <Route path="/nagrody" element={<Nagrody />} />
+            <Route path="/skanuj-kupon" element={<ScanCoupon />} />
           </Routes>
         </div>
       </div>
