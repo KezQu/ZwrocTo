@@ -1,0 +1,76 @@
+/* Container is just an anchor for the toggle; it does NOT capture pointer
+   events so the map stays draggable around it. Only the toggle (and the
+   actions when open) are interactive. */
+.fab {
+  position: absolute;
+  right: 16px;
+  bottom: 200px;
+  z-index: 1150;
+  width: 54px;
+  height: 54px;
+  pointer-events: none;
+  transition: bottom 0.25s ease;
+}
+
+/* Raised onto the map, just above the taller machine detail sheet. */
+.fab--high {
+  bottom: 388px;
+}
+
+.fab__actions {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 14px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.fab--open .fab__actions {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fab__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--green-700);
+  color: var(--white);
+  border: none;
+  padding: 14px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+}
+
+.fab__toggle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--green-700);
+  color: var(--white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 8px 20px rgba(11, 54, 29, 0.35);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.fab--open .fab__toggle {
+  transform: rotate(45deg);
+  background: var(--green-900);
+}
