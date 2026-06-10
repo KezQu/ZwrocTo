@@ -1,0 +1,388 @@
+.bottom-sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 78px;
+  z-index: 1100;
+  background: var(--white);
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+  box-shadow: var(--shadow-sheet);
+  padding: 8px 18px 18px;
+  max-height: 46vh;
+  overflow-y: auto;
+  transition: max-height 0.25s ease;
+}
+
+.bottom-sheet--expanded {
+  max-height: calc(100vh - 150px);
+}
+
+.bottom-sheet--compact {
+  background: transparent;
+  box-shadow: none;
+  bottom: 92px;
+  padding: 0 14px;
+  max-height: none;
+  overflow: visible;
+}
+
+.bottom-sheet__handle {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 6px 0 10px;
+  cursor: pointer;
+}
+
+.bottom-sheet__grabber {
+  display: block;
+  width: 44px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--green-soft);
+  margin: 0 auto;
+  opacity: 0.6;
+}
+
+.bottom-sheet__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: var(--green-50);
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bottom-sheet--compact .bottom-sheet__close {
+  top: -6px;
+  right: 6px;
+}
+
+/* Rows */
+.sheet-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sheet-row--top {
+  margin-bottom: 6px;
+  padding-right: 36px;
+}
+
+.sheet-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--green-700);
+}
+
+.sheet-status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-700);
+}
+
+.sheet-status--off {
+  color: var(--red);
+}
+
+.sheet-status--off .sheet-status__dot {
+  background: var(--red);
+}
+
+.sheet-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-800);
+}
+
+.sheet-row--title {
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.sheet-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.sheet-subtitle {
+  margin: 2px 0 0;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.sheet-title__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.sheet-distance {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.sheet-route-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-700);
+  color: var(--white);
+  border: none;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Sections */
+.sheet-section {
+  margin-top: 14px;
+}
+
+.sheet-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.sheet-label--strong {
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--green-900);
+}
+
+.sheet-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sheet-text {
+  margin: 2px 0;
+  font-size: 14px;
+  color: var(--text-strong);
+}
+
+.sheet-text--muted {
+  color: var(--text-muted);
+}
+
+/* Opening hours card */
+.sheet-hours {
+  margin-top: 14px;
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.sheet-hours__title {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--green-700);
+}
+
+.sheet-hours__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-strong);
+  padding: 3px 0;
+}
+
+.sheet-hours__time {
+  font-weight: 700;
+}
+
+/* User rating */
+.sheet-rate {
+  text-align: center;
+}
+
+.sheet-rate__title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.sheet-textarea {
+  width: 100%;
+  min-height: 70px;
+  resize: vertical;
+  border: 1px solid var(--green-100);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-strong);
+  background: var(--green-50);
+  outline: none;
+}
+
+.sheet-textarea::placeholder {
+  color: var(--text-soft);
+}
+
+.sheet-submit {
+  margin-top: 12px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--green-700);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Reviews */
+.sheet-reviews {
+  margin-top: 16px;
+}
+
+.sheet-review {
+  border-top: 1px solid var(--green-100);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.sheet-review__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.sheet-review__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: var(--green-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-review__author {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--green-900);
+}
+
+.sheet-review__when {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.sheet-review__text {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Report malfunction (ghost button, subdued red) */
+.sheet-report-issue {
+  margin-top: 16px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid rgba(204, 45, 45, 0.3);
+  color: var(--red);
+  padding: 12px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.sheet-report-issue:active {
+  background: rgba(204, 45, 45, 0.08);
+}
+
+/* Packaging compact card */
+.sheet-packaging {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.sheet-packaging__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: var(--green-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sheet-packaging__info {
+  flex: 1;
+}
+
+.sheet-packaging__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.sheet-packaging__distance {
+  margin: 3px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
