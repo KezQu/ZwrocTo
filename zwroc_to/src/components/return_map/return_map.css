@@ -1,0 +1,101 @@
+.return-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tint the OSM tiles toward the prototype's soft green look. */
+.return-map .leaflet-tile-pane {
+  filter: saturate(0.8) hue-rotate(60deg) brightness(1.03);
+}
+
+.return-map .leaflet-control-attribution {
+  font-size: 9px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Custom pin marker */
+.map-pin-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.map-pin {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: 0 6px 14px rgba(11, 54, 29, 0.35);
+}
+
+.map-pin__icon {
+  transform: rotate(45deg);
+  display: inline-flex;
+}
+
+.map-pin--active {
+  background: var(--green-700);
+}
+
+.map-pin--inactive {
+  background: var(--red);
+}
+
+.map-pin--packaging {
+  background: var(--green-500);
+}
+
+/* Selected pin: distinct colour, white ring, pop-in + pulsing halo. */
+.map-pin--selected {
+  transform: rotate(-45deg) scale(1.18);
+  box-shadow: 0 0 0 4px var(--white), 0 10px 22px rgba(11, 54, 29, 0.5);
+  animation: pin-pop 0.35s ease;
+  z-index: 10;
+}
+
+.map-pin--selected.map-pin--active,
+.map-pin--selected.map-pin--packaging {
+  background: var(--green-900);
+}
+
+.map-pin--selected.map-pin--inactive {
+  background: var(--red-accent);
+}
+
+.map-pin--selected::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  color: var(--white);
+  opacity: 0.7;
+  animation: pin-pulse 1.4s ease-out infinite;
+}
+
+@keyframes pin-pop {
+  0% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.28);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.18);
+  }
+}
+
+@keyframes pin-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}

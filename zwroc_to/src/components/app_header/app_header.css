@@ -1,0 +1,39 @@
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px 14px;
+  background: var(--green-50);
+  pointer-events: none;
+}
+
+.app-header__wordmark {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green-900);
+  letter-spacing: -0.4px;
+  pointer-events: auto;
+}
+
+.app-header__wordmark-accent {
+  color: var(--green-700);
+}
+
+.app-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: var(--green-700);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  pointer-events: auto;
+}

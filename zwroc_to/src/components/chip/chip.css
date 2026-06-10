@@ -1,0 +1,34 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--green-100);
+  color: var(--green-700);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.chip__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip--button {
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  font-family: inherit;
+}
+
+.chip--button:active {
+  transform: scale(0.96);
+}
+
+.chip--selected {
+  background: var(--green-700);
+  color: var(--white);
+}
