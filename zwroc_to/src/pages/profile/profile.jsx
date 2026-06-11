@@ -1,89 +1,133 @@
-import { Link } from "react-router-dom";
-import Title from "../../components/title/title";
-import PackagingReturned from "../../components/packaging_returned/packaging_returned";
-import TreesSaved from "../../components/trees_saved/trees_saved";
+import { useState, useEffect } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../firebase";
+import {
+  FiBell,
+  FiShield,
+  FiKey,
+  FiGlobe,
+  FiMoon,
+  FiInfo,
+  FiLogOut,
+} from "react-icons/fi";
+
+import AppHeader from "../../components/app_header/app_header";
 import "./profile.css";
 
-function UserInfo() {
-  const user_name = "Horacy"; // Change to React state?
+function UserInfo({ user }) {
+  const display = user.displayName || user.email;
 
   return (
-    <div>
-      <div>
-        <p>User Photo</p>
+    <div className="user-info">
+      <div className="user-avatar"></div>
+
+      <h1>Cześć, {display}!</h1>
+      <p className="subtitle">Razem tworzymy lepsze jutro.</p>
+
+      <div className="stats-container">
+        <div className="stat-card trees">
+          <div className="stat-value">142</div>
+          <div className="stat-label">URATOWANE DRZEWA</div>
+        </div>
+
+        <div className="stat-card bottles">
+          <div className="stat-value">1250</div>
+          <div className="stat-label">ZWÓRCONYCH BUTELEK</div>
+        </div>
       </div>
-      <h3>Cześć, {user_name}!</h3>
-      <p>Razem tworzymy lepsze jutro.</p>
-      <PackagingReturned />
-      <TreesSaved />
     </div>
   );
 }
 
 function Settings() {
-  const notifications_action = () => {
-    console.log(`notifications change requested`);
-  };
-
-  const privacy_action = () => {
-    console.log(`privacy change requested`);
-  };
-
-  const password_action = () => {
-    console.log(`password change requested`);
-  };
-
-  const language_action = () => {
-    console.log(`language change requested`);
-  };
-
-  const appearance_action = () => {
-    console.log(`appearance change requested`);
-  };
-
-  const about_app_action = () => {
-    console.log(`about app info requested`);
-  };
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div>
+    <div className="settings">
       <h2>Ustawienia</h2>
-      <button onClick={notifications_action}>Powiadomienia</button>
-      <br />
-      <button onClick={privacy_action}>Prywatność</button>
-      <br />
-      <button onClick={password_action}>Zmień hasło</button>
-      <br />
-      <button onClick={language_action}>Język</button>
-      <br />
-      <button onClick={appearance_action}>Ciemny motyw</button>
-      <br />
-      <button onClick={about_app_action}>O aplikacji</button>
-      <br />
+
+      <button className="setting-item">
+        <div className="setting-left">
+          <FiBell />
+          <span>Powiadomienia</span>
+        </div>
+      </button>
+
+      <button className="setting-item">
+        <div className="setting-left">
+          <FiShield />
+          <span>Prywatność</span>
+        </div>
+      </button>
+
+      <button className="setting-item">
+        <div className="setting-left">
+          <FiKey />
+          <span>Zmień hasło</span>
+        </div>
+      </button>
+
+      <button className="setting-item">
+        <div className="setting-left">
+          <FiGlobe />
+          <span>Język</span>
+        </div>
+
+        <span className="setting-value">POLSKI</span>
+      </button>
+
+      <button className="setting-item" onClick={() => setDarkMode((v) => !v)}>
+        <div className="setting-left">
+          <FiMoon />
+          <span>Ciemny motyw</span>
+        </div>
+
+        <div className={`toggle${darkMode ? " on" : ""}`}>
+          <div className="toggle-circle"></div>
+        </div>
+      </button>
+
+      <button className="setting-item">
+        <div className="setting-left">
+          <FiInfo />
+          <span>O aplikacji</span>
+        </div>
+      </button>
     </div>
   );
 }
 
 function Logout() {
-  const logout_action = () => {
-    console.log(`user requested to logout`);
-  };
+  const handleLogout = () => signOut(auth);
 
   return (
-    <Link to="/" onClick={logout_action}>
-      Wyloguj się
-    </Link>
+    <button className="logout-link" onClick={handleLogout}>
+      <FiLogOut />
+      <span>Wyloguj się</span>
+    </button>
   );
 }
 
 export default function Profile() {
+  const [user, setUser] = useState(undefined);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (u) => setUser(u));
+    return unsubscribe;
+  }, []);
+
+  if (user === undefined) return null;
+  if (user === null) return <Navigate to="/login" replace />;
+
   return (
-    <div className="register-page">
-      <Title />
-      <UserInfo />
-      <Settings />
-      <br />
-      <Logout />
+    <div className="profile-page">
+      <AppHeader />
+      <main className="profile-content">
+        <UserInfo user={user} />
+        <Settings />
+        <Logout />
+      </main>
     </div>
   );
 }

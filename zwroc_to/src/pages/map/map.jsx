@@ -41,7 +41,11 @@ export default function MapScreen() {
   };
 
   const submitReview = () => {
-    console.log("Nowa opinia:", { machine: selection.data.id, rating, comment });
+    console.log("Nowa opinia:", {
+      machine: selection.data.id,
+      rating,
+      comment,
+    });
     setRating(0);
     setComment("");
   };

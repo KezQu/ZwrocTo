@@ -1,19 +1,44 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 import Logo from "../../components/logo/logo";
 import "./login.css";
+import AppHeader from "../../components/app_header/app_header";
 
 function LoginForm() {
   const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const login_action = (e) => {
+  const login_action = async (e) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
+
     const formData = new FormData(e.target);
-
     const email = formData.get("email");
-    console.log(`Login user: ${email}`);
+    const password = formData.get("password");
 
-    console.log(`Login successful navigating to map`);
-    navigate("/map");
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/map");
+    } catch (err) {
+      switch (err.code) {
+        case "auth/invalid-credential":
+        case "auth/user-not-found":
+        case "auth/wrong-password":
+          setError("Nieprawidłowy e-mail lub hasło.");
+          break;
+        case "auth/too-many-requests":
+          setError("Zbyt wiele prób logowania. Spróbuj ponownie później.");
+          break;
+        default:
+          setError("Wystąpił błąd. Spróbuj ponownie.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,8 +67,10 @@ function LoginForm() {
         <Link to="/restore_password">ZAPOMNIAŁEŚ HASŁA?</Link>
       </div>
 
-      <button type="submit" className="login-button">
-        Zaloguj się →
+      {error && <p className="form-error">{error}</p>}
+
+      <button type="submit" className="login-button" disabled={loading}>
+        {loading ? "Logowanie..." : "Zaloguj się →"}
       </button>
     </form>
   );
@@ -52,6 +79,7 @@ function LoginForm() {
 export default function Login() {
   return (
     <div className="login-page">
+      <AppHeader />
       <div className="logo-container">
         <Logo />
       </div>

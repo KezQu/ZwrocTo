@@ -28,7 +28,7 @@ function RestorePasswordForm() {
       </div>
 
       <button type="submit" className="restore-password-button">
-        Wyślij link do resetowania hasła →
+        Wyślij link do resetowania hasła
       </button>
     </form>
   );

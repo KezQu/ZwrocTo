@@ -37,3 +37,24 @@
   box-shadow: var(--shadow-soft);
   pointer-events: auto;
 }
+
+.app-header__back {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: var(--green-700);
+  color: var(--white);
+  border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  pointer-events: auto;
+  transition: background 0.15s;
+}
+
+.app-header__back:hover {
+  background: var(--green-900);
+}
