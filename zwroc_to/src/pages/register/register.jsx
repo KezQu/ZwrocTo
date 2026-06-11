@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { logEvent } from "firebase/analytics";
 import { auth } from "../../firebase";
+import { analytics } from "../../firebase";
 import Logo from "../../components/logo/logo";
 import "./register.css";
 import AppHeader from "../../components/app_header/app_header";
@@ -28,10 +30,16 @@ function RegisterForm() {
 
     setLoading(true);
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
       await updateProfile(userCredential.user, { displayName: name });
+      logEvent(analytics, "sign_up", { method: "email" });
       navigate("/login");
     } catch (err) {
+      logEvent(analytics, "sign_up_failed", { error_code: err.code });
       switch (err.code) {
         case "auth/email-already-in-use":
           setError("Konto z tym adresem e-mail już istnieje.");

@@ -7,7 +7,9 @@ import "./app_header.css";
 export default function AppHeader() {
   const location = useLocation();
   const navigate = useNavigate();
-  const AllowReturn = ["/profile", "/login", "/register"].includes(location.pathname);
+  const AllowReturn = ["/profile", "/login", "/register"].includes(
+    location.pathname,
+  );
 
   return (
     <header className="app-header">

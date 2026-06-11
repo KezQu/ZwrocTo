@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { logEvent } from "firebase/analytics";
 import { auth } from "../../firebase";
+import { analytics } from "../../firebase";
 import Logo from "../../components/logo/logo";
 import "./login.css";
 import AppHeader from "../../components/app_header/app_header";
@@ -22,8 +24,10 @@ function LoginForm() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      logEvent(analytics, "login", { method: "email" });
       navigate("/map");
     } catch (err) {
+      logEvent(analytics, "login_failed", { error_code: err.code });
       switch (err.code) {
         case "auth/invalid-credential":
         case "auth/user-not-found":

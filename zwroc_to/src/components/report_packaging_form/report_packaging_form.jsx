@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 import ModalSheet from "../modal_sheet/modal_sheet";
 import Chip from "../chip/chip";
 import { BottleIcon, PinIcon } from "../icons/icons";
@@ -14,6 +16,7 @@ export default function ReportPackagingForm({ onClose, onSubmit }) {
 
   const handleSubmit = () => {
     onSubmit({ address, type, quantity });
+    logEvent(analytics, "report_packaging", { type, quantity });
     onClose();
   };
 

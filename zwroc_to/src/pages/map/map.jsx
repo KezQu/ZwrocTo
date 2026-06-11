@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 import AppHeader from "../../components/app_header/app_header";
 import BottomNav from "../../components/bottom_nav/bottom_nav";
 import ReturnMap from "../../components/return_map/return_map";
@@ -33,6 +35,7 @@ export default function MapScreen() {
     setFabOpen(false);
     setRating(0);
     setComment("");
+    logEvent(analytics, "select_machine", { machine_id: m.id, machine_name: m.name });
   };
 
   const selectPackaging = (p) => {
@@ -46,6 +49,7 @@ export default function MapScreen() {
       rating,
       comment,
     });
+    logEvent(analytics, "submit_review", { machine_id: selection.data.id, rating });
     setRating(0);
     setComment("");
   };
@@ -53,6 +57,7 @@ export default function MapScreen() {
   const openModal = (which) => {
     setModal(which);
     setFabOpen(false);
+    logEvent(analytics, "open_modal", { modal: which });
   };
 
   const isMachineSheet = selection?.type === "machine";

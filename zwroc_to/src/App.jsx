@@ -1,4 +1,7 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./firebase";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import RestorePassword from "./pages/restore_password/restore_password";
@@ -8,9 +11,18 @@ import Portfel from "./pages/portfel/portfel";
 import Nagrody from "./pages/nagrody/nagrody";
 import ScanCoupon from "./pages/scan_coupon/scan_coupon";
 
+function AnalyticsTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    logEvent(analytics, "page_view", { page_path: location.pathname });
+  }, [location.pathname]);
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
       <div className="app-layout">
         <div className="app-main">
           <Routes>

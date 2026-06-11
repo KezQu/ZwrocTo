@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 import ModalSheet from "../modal_sheet/modal_sheet";
 import Chip from "../chip/chip";
 import { RobotIcon, PinIcon } from "../icons/icons";
@@ -19,6 +21,7 @@ export default function AddMachineForm({ onClose, onSubmit }) {
 
   const handleSubmit = () => {
     onSubmit({ address, packaging, returnForms });
+    logEvent(analytics, "add_machine", { packaging_types: packaging.join(","), return_forms: returnForms.join(",") });
     onClose();
   };
 

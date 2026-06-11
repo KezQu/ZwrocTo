@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 import ModalSheet from "../modal_sheet/modal_sheet";
 import { AlertIcon } from "../icons/icons";
 
@@ -9,6 +11,7 @@ export default function ReportIssueForm({ machine, onClose, onSubmit }) {
 
   const handleSubmit = () => {
     onSubmit({ machineId: machine?.id, description });
+    logEvent(analytics, "report_issue", { machine_id: machine?.id });
     onClose();
   };
 
