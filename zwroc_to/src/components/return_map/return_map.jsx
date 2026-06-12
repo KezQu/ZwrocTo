@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import "leaflet/dist/leaflet.css";
@@ -38,6 +38,14 @@ function getIcon(variant, IconComponent, selected) {
   return iconCache[key];
 }
 
+// Clears the current selection when the user clicks empty map (not a marker).
+function MapClickHandler({ onDeselect }) {
+  useMapEvents({
+    click: () => onDeselect && onDeselect(),
+  });
+  return null;
+}
+
 export default function ReturnMap({
   machines = [],
   packagingReports = [],
@@ -46,6 +54,7 @@ export default function ReturnMap({
   selectedId,
   onSelectMachine,
   onSelectPackaging,
+  onDeselect,
 }) {
   return (
     <MapContainer
@@ -58,6 +67,8 @@ export default function ReturnMap({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+
+      <MapClickHandler onDeselect={onDeselect} />
 
       {machines.map((m) => {
         const selected = selectedType === "machine" && selectedId === m.id;

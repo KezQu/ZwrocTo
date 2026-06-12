@@ -29,6 +29,15 @@ export default function MachineCard({ machine, onClick }) {
         </span>
       </div>
 
+      {!machine.active && machine.inactiveReason && (
+        <p className="machine-card__inactive">
+          <span className="machine-card__inactive-reason">
+            {machine.inactiveReason}
+          </span>
+          {machine.inactiveSince ? ` · ${machine.inactiveSince}` : ""}
+        </p>
+      )}
+
       <h3 className="machine-card__name">{machine.name}</h3>
       <p className="machine-card__address">{machine.address}</p>
 

@@ -86,6 +86,11 @@ export default function MapScreen() {
           selectedId={selection?.data?.id}
           onSelectMachine={selectMachine}
           onSelectPackaging={selectPackaging}
+          onDeselect={() => {
+            setSelection(null);
+            setExpanded(false);
+            setFabOpen(false);
+          }}
         />
       </div>
 
