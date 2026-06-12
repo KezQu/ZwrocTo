@@ -10,6 +10,7 @@ import MapScreen from "./pages/map/map";
 import Portfel from "./pages/portfel/portfel";
 import Nagrody from "./pages/nagrody/nagrody";
 import ScanCoupon from "./pages/scan_coupon/scan_coupon";
+import MachinesList from "./pages/machines_list/machines_list";
 
 function AnalyticsTracker() {
   const location = useLocation();
@@ -32,7 +33,7 @@ function App() {
             <Route path="/restore_password" element={<RestorePassword />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/map" element={<MapScreen />} />
-            <Route path="/automaty" element={<MapScreen />} />
+            <Route path="/automaty" element={<MachinesList />} />
             <Route path="/portfel" element={<Portfel />} />
             <Route path="/nagrody" element={<Nagrody />} />
             <Route path="/skanuj-kupon" element={<ScanCoupon />} />
