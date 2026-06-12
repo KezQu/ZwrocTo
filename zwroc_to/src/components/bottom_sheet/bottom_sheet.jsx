@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import Chip from "../chip/chip";
 import StarRating from "../star_rating/star_rating";
 import { RouteIcon, RecycleIcon, UserIcon, AlertIcon } from "../icons/icons";
@@ -33,23 +34,35 @@ function MachineSheet({
 }) {
   return (
     <>
-      <div className="sheet-row sheet-row--top">
-        <span className={`sheet-status${machine.active ? "" : " sheet-status--off"}`}>
-          <span className="sheet-status__dot" />
-          {machine.active ? "AKTYWNY" : "NIEAKTYWNY"}
-        </span>
-        <span className="sheet-rating">
-          <StarRating value={1} max={1} size={15} />
-          {machine.rating.toFixed(1)}
-        </span>
-      </div>
+      <div className="sheet-header">
+        <div className="sheet-header__left">
+          <span
+            className={`sheet-status${
+              machine.active ? "" : " sheet-status--off"
+            }`}
+          >
+            <span className="sheet-status__dot" />
+            {machine.active ? "AKTYWNY" : "NIEAKTYWNY"}
+          </span>
 
-      <div className="sheet-row sheet-row--title">
-        <div>
+          {!machine.active && machine.inactiveReason && (
+            <p className="sheet-inactive">
+              <span className="sheet-inactive__reason">
+                {machine.inactiveReason}
+              </span>
+              {machine.inactiveSince ? ` · ${machine.inactiveSince}` : ""}
+            </p>
+          )}
+
           <h2 className="sheet-title">{machine.name}</h2>
           <p className="sheet-subtitle">{machine.address}</p>
         </div>
-        <div className="sheet-title__right">
+
+        <div className="sheet-header__right">
+          <span className="sheet-rating">
+            <StarRating value={1} max={1} size={15} />
+            {machine.rating.toFixed(1)}
+          </span>
           <span className="sheet-distance">{machine.distance}</span>
           <RouteButton />
         </div>
@@ -173,20 +186,17 @@ function PackagingSheet({ report }) {
 
 // Bottom sheet that surfaces the selected map pin. Machine pins get the
 // collapsible detail sheet; packaging pins get the compact card.
-export default function BottomSheet({
-  selection,
-  expanded,
-  onToggleExpand,
-  onClose,
-  reviewState,
-  onReportIssue,
-}) {
+const BottomSheet = forwardRef(function BottomSheet(
+  { selection, expanded, onToggleExpand, onClose, reviewState, onReportIssue },
+  ref
+) {
   if (!selection) return null;
 
   const isMachine = selection.type === "machine";
 
   return (
     <div
+      ref={ref}
       className={`bottom-sheet${expanded ? " bottom-sheet--expanded" : ""}${
         isMachine ? "" : " bottom-sheet--compact"
       }`}
@@ -229,4 +239,6 @@ export default function BottomSheet({
       </div>
     </div>
   );
-}
+});
+
+export default BottomSheet;

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useRef, useLayoutEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../firebase";
 import AppHeader from "../../components/app_header/app_header";
@@ -14,16 +14,23 @@ import { machines, packagingReports } from "../../data/mock";
 import "./map.css";
 
 export default function MapScreen() {
-  // Selected map pin -> drives the bottom sheet. Start on the first machine so
-  // the screen looks populated like the prototype.
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Allow opening the map on a specific machine (e.g. from the machines list);
+  // otherwise start on the first one so the screen looks populated.
+  const initialMachine =
+    machines.find((m) => m.id === location.state?.machineId) || machines[0];
+
+  // Selected map pin -> drives the bottom sheet.
   const [selection, setSelection] = useState({
     type: "machine",
-    data: machines[0],
+    data: initialMachine,
   });
+  const [mapCenter] = useState(initialMachine.coords);
   const [expanded, setExpanded] = useState(false);
   const [fabOpen, setFabOpen] = useState(false);
   const [modal, setModal] = useState(null); // null | 'machine' | 'packaging' | 'issue'
-  const navigate = useNavigate();
 
   // User review form state for the expanded machine sheet.
   const [rating, setRating] = useState(0);
@@ -64,7 +71,40 @@ export default function MapScreen() {
   // Hide the FAB while reviewing an expanded machine sheet; otherwise float it
   // just above the visible sheet/card.
   const showFab = !(isMachineSheet && expanded);
-  const fabVariant = isMachineSheet ? "high" : "mid";
+
+  // Position the FAB relative to the actual height of the visible bottom
+  // widget (machine sheet / packaging card) so it always sits just above it —
+  // and just above the nav bar when nothing is selected.
+  const sheetRef = useRef(null);
+  const [fabBottom, setFabBottom] = useState(96);
+
+  useLayoutEffect(() => {
+    const GAP = 14;
+    const BASE = 96; // resting spot above the bottom nav
+
+    const measure = () => {
+      const el = sheetRef.current;
+      if (!el) {
+        setFabBottom(BASE);
+        return;
+      }
+      const top = el.getBoundingClientRect().top;
+      setFabBottom(Math.max(BASE, window.innerHeight - top + GAP));
+    };
+
+    measure();
+    const el = sheetRef.current;
+    let ro;
+    if (el && "ResizeObserver" in window) {
+      ro = new ResizeObserver(measure);
+      ro.observe(el);
+    }
+    window.addEventListener("resize", measure);
+    return () => {
+      if (ro) ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [selection, expanded]);
 
   return (
     <div className="map-screen">
@@ -74,10 +114,16 @@ export default function MapScreen() {
         <ReturnMap
           machines={machines}
           packagingReports={packagingReports}
+          center={mapCenter}
           selectedType={selection?.type}
           selectedId={selection?.data?.id}
           onSelectMachine={selectMachine}
           onSelectPackaging={selectPackaging}
+          onDeselect={() => {
+            setSelection(null);
+            setExpanded(false);
+            setFabOpen(false);
+          }}
         />
       </div>
 
@@ -86,6 +132,7 @@ export default function MapScreen() {
       )}
 
       <BottomSheet
+        ref={sheetRef}
         selection={selection}
         expanded={expanded}
         onToggleExpand={() => setExpanded((v) => !v)}
@@ -103,7 +150,7 @@ export default function MapScreen() {
       {showFab && (
         <Fab
           open={fabOpen}
-          variant={fabVariant}
+          bottom={fabBottom}
           onToggle={() => setFabOpen((v) => !v)}
           onAddCoupon={() => {
             setFabOpen(false);

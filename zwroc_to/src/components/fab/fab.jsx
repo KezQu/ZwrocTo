@@ -10,10 +10,13 @@ export default function Fab({
   onAddCoupon,
   onAddMachine,
   onReportPackaging,
-  variant = "mid",
+  bottom,
 }) {
   return (
-    <div className={`fab fab--${variant}${open ? " fab--open" : ""}`}>
+    <div
+      className={`fab${open ? " fab--open" : ""}`}
+      style={bottom != null ? { bottom } : undefined}
+    >
       <div className="fab__actions">
         <button type="button" className="fab__action" onClick={onAddCoupon}>
           <CouponIcon size={20} />
