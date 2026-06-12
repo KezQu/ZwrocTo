@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../firebase";
 import AppHeader from "../../components/app_header/app_header";
@@ -14,16 +14,23 @@ import { machines, packagingReports } from "../../data/mock";
 import "./map.css";
 
 export default function MapScreen() {
-  // Selected map pin -> drives the bottom sheet. Start on the first machine so
-  // the screen looks populated like the prototype.
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Allow opening the map on a specific machine (e.g. from the machines list);
+  // otherwise start on the first one so the screen looks populated.
+  const initialMachine =
+    machines.find((m) => m.id === location.state?.machineId) || machines[0];
+
+  // Selected map pin -> drives the bottom sheet.
   const [selection, setSelection] = useState({
     type: "machine",
-    data: machines[0],
+    data: initialMachine,
   });
+  const [mapCenter] = useState(initialMachine.coords);
   const [expanded, setExpanded] = useState(false);
   const [fabOpen, setFabOpen] = useState(false);
   const [modal, setModal] = useState(null); // null | 'machine' | 'packaging' | 'issue'
-  const navigate = useNavigate();
 
   // User review form state for the expanded machine sheet.
   const [rating, setRating] = useState(0);
@@ -74,6 +81,7 @@ export default function MapScreen() {
         <ReturnMap
           machines={machines}
           packagingReports={packagingReports}
+          center={mapCenter}
           selectedType={selection?.type}
           selectedId={selection?.data?.id}
           onSelectMachine={selectMachine}

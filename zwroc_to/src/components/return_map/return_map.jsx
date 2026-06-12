@@ -41,6 +41,7 @@ function getIcon(variant, IconComponent, selected) {
 export default function ReturnMap({
   machines = [],
   packagingReports = [],
+  center = WADOWICE_CENTER,
   selectedType,
   selectedId,
   onSelectMachine,
@@ -48,7 +49,7 @@ export default function ReturnMap({
 }) {
   return (
     <MapContainer
-      center={WADOWICE_CENTER}
+      center={center}
       zoom={16}
       zoomControl={false}
       className="return-map"
