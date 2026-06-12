@@ -52,6 +52,8 @@ export const machines = [
     active: false,
     rating: 4.2,
     distance: '320 m',
+    inactiveReason: 'Przepełniony',
+    inactiveSince: '20 min temu',
     packaging: ['plastik', 'puszki'],
     returnForms: ['karta', 'kupon'],
     location: {

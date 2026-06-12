@@ -33,23 +33,35 @@ function MachineSheet({
 }) {
   return (
     <>
-      <div className="sheet-row sheet-row--top">
-        <span className={`sheet-status${machine.active ? "" : " sheet-status--off"}`}>
-          <span className="sheet-status__dot" />
-          {machine.active ? "AKTYWNY" : "NIEAKTYWNY"}
-        </span>
-        <span className="sheet-rating">
-          <StarRating value={1} max={1} size={15} />
-          {machine.rating.toFixed(1)}
-        </span>
-      </div>
+      <div className="sheet-header">
+        <div className="sheet-header__left">
+          <span
+            className={`sheet-status${
+              machine.active ? "" : " sheet-status--off"
+            }`}
+          >
+            <span className="sheet-status__dot" />
+            {machine.active ? "AKTYWNY" : "NIEAKTYWNY"}
+          </span>
 
-      <div className="sheet-row sheet-row--title">
-        <div>
+          {!machine.active && machine.inactiveReason && (
+            <p className="sheet-inactive">
+              <span className="sheet-inactive__reason">
+                {machine.inactiveReason}
+              </span>
+              {machine.inactiveSince ? ` · ${machine.inactiveSince}` : ""}
+            </p>
+          )}
+
           <h2 className="sheet-title">{machine.name}</h2>
           <p className="sheet-subtitle">{machine.address}</p>
         </div>
-        <div className="sheet-title__right">
+
+        <div className="sheet-header__right">
+          <span className="sheet-rating">
+            <StarRating value={1} max={1} size={15} />
+            {machine.rating.toFixed(1)}
+          </span>
           <span className="sheet-distance">{machine.distance}</span>
           <RouteButton />
         </div>
