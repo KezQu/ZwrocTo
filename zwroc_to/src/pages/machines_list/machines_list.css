@@ -1,0 +1,49 @@
+.machines-list {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--green-50);
+  overflow: hidden;
+}
+
+.machines-list__body {
+  height: 100%;
+  overflow-y: auto;
+  padding: 78px 18px calc(100px + env(safe-area-inset-bottom, 0px));
+}
+
+.machines-list__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.machines-list__title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--green-900);
+}
+
+.machines-list__count {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.machines-list__filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.machines-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
