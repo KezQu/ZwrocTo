@@ -1,0 +1,1388 @@
+﻿/* ============================================
+   NAGRODY PAGE
+   ============================================ */
+
+.nagrody-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 128px;
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(0deg, #ddffe2, #ddffe2), #ffffff;
+}
+/* BottomNavBar */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 24px 24px 23.94px;
+gap: 15.9px;
+isolation: isolate;
+
+position: absolute;
+width: 390px;
+height: 88px;
+left: 0px;
+bottom: 0px;
+
+background: rgba(236, 253, 245, 0.8);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 40px 40px 0px 0px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 2;
+/* BottomNavBar:shadow */
+position: absolute;
+width: 390px;
+left: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px -12px 32px -4px rgba(11, 54, 29, 0.06);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 49.06px;
+height: 53px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 18px;
+height: 22px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 18px;
+height: 18px;
+
+background: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 33.06px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 33.06px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 79.58px;
+height: 53.51px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 18.03px;
+height: 22.51px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 18.03px;
+height: 18.51px;
+
+background: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 63.58px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 63.58px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 67.34px;
+height: 53px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 19px;
+height: 22px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 19px;
+height: 18px;
+
+background: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 51.34px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 51.34px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+
+width: 98.41px;
+height: 56px;
+
+background: #A7F3D0;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 16px;
+height: 25px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 21px;
+
+background: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 58.41px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 58.41px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Header - TopAppBar */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px 24px;
+gap: 89.8px;
+
+width: 390px;
+height: 72px;
+
+background: rgba(236, 253, 245, 0.8);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+/* Heading 1 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 98.3px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 98.3px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+letter-spacing: -0.4px;
+
+color: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Vector */
+width: 19.25px;
+height: 22px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Main Content Canvas */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px 24px;
+gap: 96px;
+
+width: 390px;
+max-width: 1024px;
+height: 1541px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+/* Hero Section: Points & Impact */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 48px;
+
+width: 342px;
+height: 586px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 334.31px;
+height: 361px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Heading 2 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 334.31px;
+height: 112px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 228.59px;
+height: 112px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 56px;
+/* or 100% */
+display: flex;
+align-items: center;
+letter-spacing: -1.4px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 334.31px;
+max-width: 448px;
+height: 117px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 334.31px;
+height: 117px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 29px;
+/* or 162% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px 32px;
+gap: 16px;
+
+width: 243.64px;
+height: 84px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 21.3px;
+height: 21.28px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 21.3px;
+height: 21.28px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 142.34px;
+height: 52px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 142.34px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 142.34px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 142.34px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 119.48px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 133px 0px;
+isolation: isolate;
+
+width: 342px;
+height: 177px;
+
+background: #CAFDD4;
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Gradient */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(135deg, rgba(157, 241, 151, 0.3) 0%, rgba(157, 241, 151, 0) 100%);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 192px;
+height: 160px;
+right: -40px;
+bottom: -40px;
+
+opacity: 0.2;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Icon */
+width: 192px;
+height: 160px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 174px;
+height: 76px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 174px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 79.41px;
+height: 48px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 174px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* URATOWANE DRZEWA */
+width: 174px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Section - Rewards Collection (Bento Grid) */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+width: 342px;
+height: 763px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Heading 3 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 342px;
+height: 42px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Kolekcja Nagród */
+width: 342px;
+height: 42px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 42px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+width: 342px;
+height: 681px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Article - Reward Card 1 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 32px;
+isolation: isolate;
+
+position: absolute;
+height: 320px;
+min-height: 320px;
+left: 0px;
+right: 0px;
+top: 352px;
+
+background: #FFFFFF;
+border-radius: 48px;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px 24px 21px;
+
+position: absolute;
+width: 146px;
+height: 64px;
+right: 0px;
+top: 0px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3.5px 12px;
+
+width: 98px;
+height: 23px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* DOSTĘPNE */
+width: 74px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 24px;
+gap: 8px;
+
+width: 278px;
+height: 160px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+/* Icon */
+width: 36px;
+height: 36px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Heading 4 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 0px 0px;
+
+width: 278px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Darmowa Kawa */
+width: 278px;
+height: 28px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 278px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Wymień punkty na kubek ulubionej kawy w lokalnej kawiarni partnerskiej. */
+width: 278px;
+height: 40px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 36px 0px 0px;
+
+width: 278px;
+height: 84px;
+min-height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 93.53px;
+
+width: 278px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 73.41px;
+height: 28px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 73.41px;
+height: 28px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 12px 24px;
+
+width: 111.06px;
+height: 48px;
+
+background: linear-gradient(90deg, #176A21 0%, #025D16 100%);
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 63.06px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #D1FFC8;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Article - Reward Card 3 (Featured) */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 32px;
+isolation: isolate;
+
+position: absolute;
+height: 320px;
+min-height: 320px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+background: #ACECBB;
+border-radius: 48px;
+/* Gradient */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(45deg, rgba(157, 241, 151, 0.5) 0%, rgba(157, 241, 151, 0) 100%);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px 24px 21px;
+
+position: absolute;
+width: 147.44px;
+height: 64px;
+right: 0px;
+top: 0px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3.5px 12px;
+
+width: 99.44px;
+height: 23px;
+
+background: #176A21;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 75.44px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+
+color: #D1FFC8;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 24px;
+gap: 8px;
+
+width: 278px;
+height: 164px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+/* Icon */
+width: 36px;
+height: 40px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Heading 4 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 0px 0px;
+
+width: 278px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Zasadź Drzewo */
+width: 278px;
+height: 28px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 278px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Przeznacz swoje punkty na posadzenie prawdziwego drzewa! */
+width: 278px;
+height: 40px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 16px 0px 0px;
+
+width: 278px;
+height: 64px;
+min-height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+z-index: 3;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 86.47px;
+
+width: 278px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 87.09px;
+height: 28px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 87.09px;
+height: 28px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 12px 24px;
+
+width: 104.44px;
+height: 48px;
+
+background: linear-gradient(90deg, #176A21 0%, #025D16 100%);
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 56.44px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #D1FFC8;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

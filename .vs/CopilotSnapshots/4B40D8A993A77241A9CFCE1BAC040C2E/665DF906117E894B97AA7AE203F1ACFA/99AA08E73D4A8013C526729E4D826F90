@@ -1,0 +1,424 @@
+﻿/* ============================================
+   NAGRODY PAGE
+   ============================================ */
+
+.nagrody-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 128px;
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(0deg, #ddffe2, #ddffe2), #ffffff;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.nagrody-page > :first-child {
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.nagrody-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 24px;
+  gap: 96px;
+  width: 100%;
+  max-width: 1024px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 48px;
+  width: 100%;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -1.4px;
+  color: #0b361d;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-description {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #3b6447;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  max-width: 334px;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+  width: auto;
+  height: 84px;
+  background: #acecbb;
+  border-radius: 9999px;
+}
+
+.hero-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  background: #176a21;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-size: 24px;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0;
+  width: auto;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.hero-label {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #3b6447;
+  margin: 0;
+}
+
+.hero-value {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #176a21;
+  margin: 0;
+}
+
+/* ============================================
+   REWARDS SECTION
+   ============================================ */
+
+.rewards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 40px;
+  width: 100%;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.rewards-title {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #0b361d;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  align-self: stretch;
+}
+
+.rewards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  width: 100%;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* ============================================
+   REWARD CARD
+   ============================================ */
+
+.reward-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  position: relative;
+  min-height: 320px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 48px;
+  isolation: isolate;
+  transition: all 0.3s ease;
+}
+
+.reward-card.spotlight {
+  background: #acecbb;
+}
+
+.reward-card.spotlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(157, 241, 151, 0.5) 0%, rgba(157, 241, 151, 0) 100%);
+  z-index: 0;
+  border-radius: 48px;
+}
+
+.reward-badge {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3.5px 12px;
+  width: auto;
+  height: 23px;
+  background: #acecbb;
+  border-radius: 9999px;
+  z-index: 1;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #176a21;
+  margin: 0;
+}
+
+.reward-card.spotlight .reward-badge {
+  background: #176a21;
+  color: #d1ffc8;
+}
+
+.reward-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 24px;
+  gap: 8px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.reward-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 32px;
+  background: #176a21;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.reward-title {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #0b361d;
+  margin: 16px 0 0 0;
+  display: flex;
+  align-items: center;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.reward-description {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #3b6447;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.reward-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0 0;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.reward-points {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #176a21;
+  margin: 0;
+  order: 0;
+  flex-grow: 0;
+}
+
+.reward-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  width: auto;
+  height: 48px;
+  background: linear-gradient(90deg, #176a21 0%, #025d16 100%);
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #d1ffc8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  order: 1;
+  flex-grow: 0;
+}
+
+.reward-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.reward-button:active {
+  transform: scale(0.95);
+}
+
+/* ============================================
+   BOTTOM NAV
+   ============================================ */
+
+.nagrody-page > :last-child {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 640px) {
+  .nagrody-main-content {
+    padding: 32px 16px;
+    gap: 64px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .rewards-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .reward-card {
+    padding: 24px;
+    min-height: 280px;
+  }
+
+  .reward-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .reward-description {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

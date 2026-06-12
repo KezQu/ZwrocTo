@@ -15,7 +15,13 @@ import MachinesList from "./pages/machines_list/machines_list";
 function AnalyticsTracker() {
   const location = useLocation();
   useEffect(() => {
-    logEvent(analytics, "page_view", { page_path: location.pathname });
+    try {
+      if (analytics) {
+        logEvent(analytics, "page_view", { page_path: location.pathname });
+      }
+    } catch (error) {
+      console.warn("Analytics error:", error);
+    }
   }, [location.pathname]);
   return null;
 }
