@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 
 import AppHeader from "../../components/app_header/app_header";
+import BottomNav from "../../components/bottom_nav/bottom_nav";
 import "./profile.css";
 
 function UserInfo({ user }) {
@@ -22,7 +23,7 @@ function UserInfo({ user }) {
     <div className="user-info">
       <div className="user-avatar"></div>
 
-      <h1>Cześć, {display}!</h1>
+      <h1>Czesc, {display}!</h1>
       <p className="subtitle">Razem tworzymy lepsze jutro.</p>
 
       <div className="stats-container">
@@ -33,7 +34,7 @@ function UserInfo({ user }) {
 
         <div className="stat-card bottles">
           <div className="stat-value">1250</div>
-          <div className="stat-label">ZWÓRCONYCH BUTELEK</div>
+          <div className="stat-label">ZWR�CONYCH BUTELEK</div>
         </div>
       </div>
     </div>
@@ -57,21 +58,21 @@ function Settings() {
       <button className="setting-item">
         <div className="setting-left">
           <FiShield />
-          <span>Prywatność</span>
+          <span>Prywatnosc</span>
         </div>
       </button>
 
       <button className="setting-item">
         <div className="setting-left">
           <FiKey />
-          <span>Zmień hasło</span>
+          <span>Zmien haslo</span>
         </div>
       </button>
 
       <button className="setting-item">
         <div className="setting-left">
           <FiGlobe />
-          <span>Język</span>
+          <span>Jezyk</span>
         </div>
 
         <span className="setting-value">POLSKI</span>
@@ -83,7 +84,7 @@ function Settings() {
           <span>Ciemny motyw</span>
         </div>
 
-        <div className={`toggle${darkMode ? " on" : ""}`}>
+        <div className={`toggle$${darkMode ? " on" : ""}`}>
           <div className="toggle-circle"></div>
         </div>
       </button>
@@ -99,12 +100,16 @@ function Settings() {
 }
 
 function Logout() {
-  const handleLogout = () => signOut(auth);
+  const handleLogout = () => {
+    if (auth) {
+      signOut(auth);
+    }
+  };
 
   return (
     <button className="logout-link" onClick={handleLogout}>
       <FiLogOut />
-      <span>Wyloguj się</span>
+      <span>Wyloguj sie</span>
     </button>
   );
 }
@@ -113,6 +118,14 @@ export default function Profile() {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
+    if (!auth) {
+      setUser({ 
+        displayName: "Demo User", 
+        email: "demo@example.com" 
+      });
+      return;
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (u) => setUser(u));
     return unsubscribe;
   }, []);
@@ -128,6 +141,7 @@ export default function Profile() {
         <Settings />
         <Logout />
       </main>
+      <BottomNav />
     </div>
   );
 }

@@ -14,7 +14,13 @@ import ScanCoupon from "./pages/scan_coupon/scan_coupon";
 function AnalyticsTracker() {
   const location = useLocation();
   useEffect(() => {
-    logEvent(analytics, "page_view", { page_path: location.pathname });
+    try {
+      if (analytics) {
+        logEvent(analytics, "page_view", { page_path: location.pathname });
+      }
+    } catch (error) {
+      console.warn("Analytics error:", error);
+    }
   }, [location.pathname]);
   return null;
 }

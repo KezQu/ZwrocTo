@@ -6,7 +6,16 @@ import { AlertIcon } from "../icons/icons";
 
 // "Zgłoś awarię" modal, opened from the machine sheet. Lets the user describe
 // the malfunction for the selected machine. Local state only (mock).
-export default function ReportIssueForm({ machine, onClose, onSubmit }) {
+export default function ReportIssueForm({ 
+  machine, 
+  onClose, 
+  onSubmit,
+  title = "Zgłoś awarię",
+  label = "Opis usterki",
+  placeholder = "Opisz co nie działa...",
+  showIcon = true,
+  showMachineInfo = true,
+}) {
   const [description, setDescription] = useState("");
 
   const handleSubmit = () => {
@@ -17,20 +26,20 @@ export default function ReportIssueForm({ machine, onClose, onSubmit }) {
 
   return (
     <ModalSheet
-      icon={<AlertIcon size={24} />}
-      title="Zgłoś awarię"
+      icon={showIcon ? <AlertIcon size={24} /> : null}
+      title={title}
       onClose={onClose}
     >
-      {machine && (
+      {showMachineInfo && machine && (
         <p className="report-form__machine">
           {machine.name}, {machine.address}
         </p>
       )}
 
-      <label className="report-form__label">Opis usterki</label>
+      <label className="report-form__label">{label}</label>
       <textarea
         className="report-form__textarea"
-        placeholder="Opisz co nie działa..."
+        placeholder={placeholder}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />

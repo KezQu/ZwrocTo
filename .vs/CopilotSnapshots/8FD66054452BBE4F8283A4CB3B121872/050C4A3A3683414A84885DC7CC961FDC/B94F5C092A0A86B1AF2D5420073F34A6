@@ -1,0 +1,1338 @@
+﻿/* Profil Użytkownika */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 128px;
+
+position: relative;
+width: 382px;
+height: 1370px;
+min-height: 1370px;
+
+background: linear-gradient(0deg, #DDFFE2, #DDFFE2), #FFFFFF;
+/* Header - TopAppBar */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px 24px;
+gap: 89.8px;
+
+width: 382px;
+height: 72px;
+
+background: rgba(236, 253, 245, 0.8);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Heading 1 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 98.3px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 98.3px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+letter-spacing: -0.4px;
+
+color: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Vector */
+width: 19.25px;
+height: 22px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Main */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 22px 24px;
+gap: 48px;
+
+width: 382px;
+max-width: 896px;
+height: 1159px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Section - Profile Header */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 334px;
+height: 228px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 128px;
+height: 128px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 249.03px;
+height: 76px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Heading 2 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 249.03px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 222.48px;
+height: 40px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height, or 111% */
+display: flex;
+align-items: center;
+letter-spacing: -0.9px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 249.03px;
+height: 28px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Text */
+width: 249.03px;
+height: 28px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+display: flex;
+align-items: center;
+
+color: rgba(11, 54, 29, 0.7);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Section - Stats Bento Grid */
+width: 334px;
+height: 164px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 133px 0px;
+isolation: isolate;
+
+position: absolute;
+height: 152px;
+left: 0px;
+right: 179px;
+top: 0px;
+
+background: #CAFDD4;
+border-radius: 48px;
+/* Gradient */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(135deg, rgba(157, 241, 151, 0.3) 0%, rgba(157, 241, 151, 0) 100%);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 192px;
+height: 160px;
+right: -40px;
+bottom: -40px;
+
+opacity: 0.2;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Icon */
+width: 192px;
+height: 160px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 92px;
+height: 96px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 92px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* 142 */
+width: 60px;
+height: 48px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 92px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* URATOWANE 
+DRZEWA */
+width: 92px;
+height: 40px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 20px;
+/* or 167% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 133px 0px;
+isolation: isolate;
+
+position: absolute;
+height: 152px;
+left: 179px;
+right: -3px;
+top: 0px;
+
+background: #FCFCFC;
+border-radius: 48px;
+/* Gradient */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(135deg, rgba(157, 241, 151, 0.3) 0%, rgba(157, 241, 151, 0) 100%);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 192px;
+height: 160px;
+right: -40px;
+bottom: -40px;
+
+opacity: 0.2;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 109px;
+height: 96px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 109px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* 1 250 */
+width: 91px;
+height: 48px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 109px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* zwróconych 
+butelek */
+width: 109px;
+height: 40px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 20px;
+/* or 167% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Heading 2 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 334px;
+height: 56px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Ustawienia */
+width: 247px;
+height: 56px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+/* identical to box height, or 117% */
+display: flex;
+align-items: center;
+letter-spacing: -1.4px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Settings Content - Digital Greenhouse Style (No lines, high whitespace) */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 24px 0px 8px;
+gap: 40px;
+
+width: 334px;
+height: 554px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+/* Button - Item: Powiadomienia */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 95.15px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 180.31px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 17.5px;
+height: 22.39px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 17.5px;
+height: 22.39px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 138.81px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 138.81px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+opacity: 0;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 16px;
+
+background: #8BB795;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button - Item: Prywatno */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 127.53px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 147.94px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 17.5px;
+height: 22.1px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 17.5px;
+height: 22.1px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 106.44px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 106.44px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+opacity: 0;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 16px;
+
+background: #8BB795;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button - Item: Zmień hasło */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 125.31px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 158.2px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 25.54px;
+height: 12.83px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 25.54px;
+height: 12.83px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 108.66px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 108.66px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+opacity: 0;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 16px;
+
+background: #8BB795;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button - Item: Język */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 113.59px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 94.7px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 22.17px;
+height: 22.17px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 22.17px;
+height: 22.17px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 48.53px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 48.53px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 87.84px;
+height: 21px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 59.84px;
+height: 21px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Text */
+width: 59.84px;
+height: 21px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+
+color: #246830;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+opacity: 0;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 16px;
+
+background: #8BB795;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Item: Ciemny motyw (Toggle) */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px 0px;
+gap: 67.5px;
+
+width: 302px;
+height: 64px;
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 178.25px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 19.77px;
+height: 19.78px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 19.77px;
+height: 19.78px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 134.48px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 134.48px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button - Custom Tonal Toggle */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 4px;
+
+width: 56px;
+height: 32px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Background+Shadow */
+width: 24px;
+height: 24px;
+
+background: #DDFFE2;
+box-shadow: 0px 4px 12px rgba(11, 54, 29, 0.1);
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Button - Item: O aplikacji */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 139.39px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 140.75px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 22.17px;
+height: 22.17px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 22.17px;
+height: 22.17px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 94.58px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 94.58px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+opacity: 0;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 16px;
+
+background: #8BB795;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Spacing Block */
+width: 302px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+/* Button - Item: Wyloguj się (Destructive action) */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 302px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 7;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 148.74px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 19.83px;
+height: 19.83px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 19.83px;
+height: 19.83px;
+
+background: #B02500;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 104.91px;
+height: 27px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Text */
+width: 104.91px;
+height: 27px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.45px;
+
+color: #B02500;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

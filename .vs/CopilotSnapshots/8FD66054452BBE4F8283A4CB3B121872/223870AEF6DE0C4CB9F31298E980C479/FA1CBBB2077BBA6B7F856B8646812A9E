@@ -1,0 +1,2415 @@
+﻿/* ============================================
+   PORTFEL PAGE - Responsive Layout
+   ============================================ */
+
+.portfel-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 128px;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(0deg, #ddffe2, #ddffe2), #ffffff;
+  position: relative;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.portfel-page > :first-child {
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  z-index: 1;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.portfel-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 24px;
+  gap: 21px;
+  width: 100%;
+  max-width: 768px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+/* ============================================
+   BALANCE SECTION
+   ============================================ */
+
+.balance-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 24px;
+  isolation: isolate;
+  width: 100%;
+  max-width: 342px;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0px 12px 32px -4px rgba(11, 54, 29, 0.06);
+  border-radius: 48px;
+  position: relative;
+}
+
+.balance-section::before {
+  content: "Z";
+  position: absolute;
+  right: -48.01px;
+  top: -48px;
+  width: 109px;
+  height: 192px;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 192px;
+  font-weight: 800;
+  line-height: 192px;
+  color: #176a21;
+  opacity: 0.05;
+}
+
+.balance-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.balance-label {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #3b6447;
+  margin: 0;
+}
+
+.balance-amount {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  color: #0b361d;
+  margin: 0;
+}
+
+.balance-amount .currency {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 8px;
+  color: #176a21;
+}
+
+.primary-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7.62px;
+  padding: 15.24px 0;
+  width: 100%;
+  max-width: 262px;
+  height: 53.35px;
+  background: linear-gradient(90deg, #176a21 0%, #025d16 100%);
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0px 7.62px 22.87px -3.81px rgba(23, 106, 33, 0.25);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 15.24px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #d1ffc8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 28px -2px rgba(23, 106, 33, 0.3);
+}
+
+.primary-button span {
+  font-size: 18px;
+}
+
+/* ============================================
+   COUPONS SECTION
+   ============================================ */
+
+.coupons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 12px;
+  width: 100%;
+  max-width: 342px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #0b361d;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #176a21;
+  margin: 0;
+}
+
+.coupons-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 8px;
+  width: 100%;
+  max-width: 326px;
+  max-height: 150px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.coupon-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  gap: 10px;
+  isolation: isolate;
+  flex-shrink: 0;
+  width: 140px;
+  height: 150px;
+  background: #ffffff;
+  border: 1px solid rgba(139, 183, 149, 0.15);
+  border-radius: 48px;
+  box-shadow: 0px 8px 24px -4px rgba(11, 54, 29, 0.04);
+  position: relative;
+}
+
+.coupon-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: #abf4ac;
+  border-radius: 9999px;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.coupon-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.coupon-name {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0b361d;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.coupon-price {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #3b6447;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.pagination-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 1px 0;
+  width: 100%;
+  max-width: 326px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #8dd09c;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 11px;
+  height: 11px;
+  background: #176a21;
+}
+
+/* ============================================
+   TRANSACTIONS SECTION
+   ============================================ */
+
+.transactions-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  width: 100%;
+  max-width: 342px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.transaction-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 116.46px;
+  width: 100%;
+  max-width: 342px;
+  height: auto;
+}
+
+.transaction-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.transaction-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: #acecbb;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.transaction-icon::before {
+  content: '';
+  width: 19px;
+  height: 20px;
+  background: #176a21;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.transaction-type {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0b361d;
+  margin: 0 0 4px 0;
+}
+
+.transaction-location {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #3b6447;
+  margin: 0;
+}
+
+.transaction-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.transaction-amount {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #176a21;
+  text-align: right;
+  margin: 0 0 4px 0;
+}
+
+.transaction-date {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #3b6447;
+  text-align: right;
+  margin: 0;
+}
+
+/* ============================================
+   BOTTOM NAV
+   ============================================ */
+
+.portfel-page > :last-child {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 640px) {
+  .portfel-main-content {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .balance-section {
+    padding: 24px;
+  }
+
+  .transaction-item {
+    gap: 80px;
+  }
+
+  .coupons-gallery {
+    max-height: 120px;
+  }
+}
+/* BottomNavBar */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 24px 24px 23.94px;
+gap: 15.9px;
+isolation: isolate;
+
+position: absolute;
+width: 390px;
+height: 105px;
+left: 0px;
+bottom: 6px;
+
+background: rgba(236, 253, 245, 0.8);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 40px 40px 0px 0px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 2;
+/* BottomNavBar:shadow */
+position: absolute;
+width: 390px;
+left: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px -12px 32px -4px rgba(11, 54, 29, 0.06);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 49px;
+height: 53px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 18px;
+height: 22px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 18px;
+height: 18px;
+
+background: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 33px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* MAPA */
+width: 33px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 79px;
+height: 53.51px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 18.03px;
+height: 22.51px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 18.03px;
+height: 18.51px;
+
+background: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 63px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* AUTOMATY */
+width: 63px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 107px;
+height: 73px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+
+width: 91px;
+height: 57px;
+
+background: #A7F3D0;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 19px;
+height: 26px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 19px;
+height: 22px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 19px;
+height: 18px;
+
+background: #065F46;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 51px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* PORTFEL */
+width: 51px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Link */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px;
+
+width: 74px;
+height: 56px;
+
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 16px;
+height: 25px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 16px;
+height: 21px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 16px;
+height: 25px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 16px;
+height: 21px;
+
+background: rgba(6, 78, 59, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 58px;
+height: 15px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Nagrody */
+width: 58px;
+height: 15px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(6, 95, 70, 0.6);
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Header - TopAppBar */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px 24px;
+gap: 89.8px;
+
+width: 390px;
+height: 72px;
+
+background: rgba(236, 253, 245, 0.8);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+/* Heading 1 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 99px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* ZwróćTo */
+width: 99px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+letter-spacing: -0.4px;
+
+color: #064E3B;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Vector */
+width: 19.25px;
+height: 22px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Main Content */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px 24px;
+gap: 21px;
+
+width: 390px;
+max-width: 768px;
+height: 833px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+/* Balance Section (Bento style highlight) */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px;
+gap: 24px;
+isolation: isolate;
+
+width: 342px;
+height: 163px;
+
+background: #FFFFFF;
+box-shadow: 0px 12px 32px -4px rgba(11, 54, 29, 0.06);
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Subtle Z background motif */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 109px;
+height: 192px;
+right: -48.01px;
+top: -48px;
+
+opacity: 0.05;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Z */
+width: 109px;
+height: 192px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 192px;
+line-height: 192px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 278px;
+height: 81px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 186px;
+height: 81px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Heading 2 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 186px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Odzyskane ŚRODKI */
+width: 186px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.6px;
+text-transform: uppercase;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Paragraph */
+width: 186px;
+height: 49px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* 142,50 */
+position: absolute;
+width: 150px;
+height: 48px;
+left: 0px;
+top: 0px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+letter-spacing: -2.4px;
+
+color: #0B361D;
+/* zł */
+position: absolute;
+width: 17px;
+height: 28px;
+left: 155.42px;
+top: 21px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Button:margin */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 0px 0px;
+
+width: 278px;
+height: 72px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+/* Section - Earnings Chart */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+isolation: isolate;
+
+width: 342px;
+height: 59px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Primary Action Button */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15.2436px 0px;
+gap: 7.62px;
+isolation: isolate;
+
+position: absolute;
+width: 262px;
+height: 53.35px;
+left: 40px;
+top: 6px;
+
+background: linear-gradient(90deg, #176A21 0%, #025D16 100%);
+border-radius: 9526.32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Primary Action Button:shadow */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 7.62182px 22.8655px -3.81091px rgba(23, 106, 33, 0.25);
+border-radius: 9526.32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 21.91px;
+height: 13.94px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Vector */
+width: 21.91px;
+height: 13.94px;
+
+background: #D1FFC8;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Dodaj kupon */
+width: 102.89px;
+height: 23px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 15.2436px;
+line-height: 23px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #D1FFC8;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Section - Earnings Chart */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 342px;
+height: 236px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-end;
+padding: 0px;
+gap: 116.93px;
+
+width: 342px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Heading 3 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 198px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Galeria kuponów */
+width: 198px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 56px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* 24,00 zł */
+width: 56px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 8px 8px 0px;
+gap: 8px;
+
+width: 342px;
+height: 192px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Frame 3 */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 326px;
+height: 150px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Card 1 */
+box-sizing: border-box;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px 25px;
+gap: 10px;
+isolation: isolate;
+
+width: 140px;
+height: 150px;
+
+background: #FFFFFF;
+border: 1px solid rgba(139, 183, 149, 0.15);
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Card 1:shadow */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(11, 54, 29, 0.04);
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 64px;
+height: 64px;
+
+background: #ABF4AC;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 40.86px;
+height: 26px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Vector */
+width: 40.86px;
+height: 26px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 43px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 43px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* DINO */
+width: 43px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 43px;
+height: 16px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* 4,00 zł */
+width: 40px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Card 2 */
+box-sizing: border-box;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px 33.39px 20px 33.38px;
+gap: 10px;
+isolation: isolate;
+
+width: 140px;
+height: 150px;
+
+background: #FFFFFF;
+border: 1px solid rgba(139, 183, 149, 0.15);
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Card 1:shadow */
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(11, 54, 29, 0.04);
+border-radius: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 64px;
+height: 64px;
+
+background: #ABF4AC;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 40.86px;
+height: 26px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Vector */
+width: 40.86px;
+height: 26px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 81px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 81px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Biedronka */
+width: 81px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 81px;
+height: 16px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* 2,00 zł */
+width: 40px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Frame 4 */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px 0px;
+gap: 5px;
+
+width: 326px;
+height: 13px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Vector */
+width: 11px;
+height: 11px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Vector */
+width: 7px;
+height: 7px;
+
+background: #8DD09C;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Vector */
+width: 7px;
+height: 7px;
+
+background: #8DD09C;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+/* Section - Recent Returns List */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 342px;
+height: 248px;
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+/* Heading 3 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 342px;
+height: 32px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Ostatnie zwroty */
+width: 342px;
+height: 32px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 342px;
+height: 192px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Item 1 */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 116.46px;
+
+width: 342px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 163px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 48px;
+height: 48px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 19px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 19px;
+height: 20px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 99px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 99px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Szkło */
+width: 44px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 99px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Automat #402 */
+width: 99px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 64px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 64px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* +2,50 zł */
+width: 64px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 64px;
+height: 16px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Dziś */
+width: 24px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Item 2 */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 101.99px;
+
+width: 342px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 181px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 48px;
+height: 48px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 20px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 20px;
+height: 20px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 117px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 117px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Papier / Karton */
+width: 117px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 117px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Punkt odbioru */
+width: 94px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 60px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 60px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* +1,20 zł */
+width: 60px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 60px;
+height: 16px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Wczoraj */
+width: 46px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Item 3 */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 117.47px;
+
+width: 342px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 159px;
+height: 48px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Background */
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 48px;
+height: 48px;
+
+background: #ACECBB;
+border-radius: 9999px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 10.91px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Icon */
+width: 10.91px;
+height: 20px;
+
+background: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 95px;
+height: 44px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 95px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* Plastik PET */
+width: 84px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+color: #0B361D;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 95px;
+height: 20px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* Automat #105 */
+width: 95px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 66px;
+height: 40px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 66px;
+height: 24px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* +4,00 zł */
+width: 66px;
+height: 24px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #176A21;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Container */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 66px;
+height: 16px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+/* 12 Wrz */
+width: 35px;
+height: 16px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #3B6447;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
