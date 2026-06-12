@@ -26,6 +26,10 @@ Aplikacja mobilna wspomagająca zwrot opakowań wielokrotnego użytku. Użytkown
 
 ![Profil](docs/screenshots/profile.png)
 
+### Automaty
+
+![Automaty](docs/screenshots/machines.png)
+
 ### Portfel
 
 ![Portfel](docs/screenshots/portfel.png)
@@ -130,7 +134,7 @@ Do analizy zachowań użytkowników zintegrowano **Contentsquare**. Narzędzie u
 
 ![Contentsquare — mapa ciepła](docs/screenshots/contentsquare_heatmap.png)
 
-#### Analiza lejka / podróż użytkownika
+#### Podróż użytkownika po stronach
 
 ![Contentsquare — journey](docs/screenshots/contentsquare_journey.png)
 
