@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import Chip from "../chip/chip";
 import StarRating from "../star_rating/star_rating";
 import { RouteIcon, RecycleIcon, UserIcon, AlertIcon } from "../icons/icons";
@@ -185,20 +186,17 @@ function PackagingSheet({ report }) {
 
 // Bottom sheet that surfaces the selected map pin. Machine pins get the
 // collapsible detail sheet; packaging pins get the compact card.
-export default function BottomSheet({
-  selection,
-  expanded,
-  onToggleExpand,
-  onClose,
-  reviewState,
-  onReportIssue,
-}) {
+const BottomSheet = forwardRef(function BottomSheet(
+  { selection, expanded, onToggleExpand, onClose, reviewState, onReportIssue },
+  ref
+) {
   if (!selection) return null;
 
   const isMachine = selection.type === "machine";
 
   return (
     <div
+      ref={ref}
       className={`bottom-sheet${expanded ? " bottom-sheet--expanded" : ""}${
         isMachine ? "" : " bottom-sheet--compact"
       }`}
@@ -241,4 +239,6 @@ export default function BottomSheet({
       </div>
     </div>
   );
-}
+});
+
+export default BottomSheet;

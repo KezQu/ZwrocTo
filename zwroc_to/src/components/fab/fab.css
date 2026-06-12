@@ -12,11 +12,6 @@
   transition: bottom 0.25s ease;
 }
 
-/* Raised onto the map, just above the taller machine detail sheet. */
-.fab--high {
-  bottom: 428px;
-}
-
 .fab__actions {
   position: absolute;
   right: 0;
