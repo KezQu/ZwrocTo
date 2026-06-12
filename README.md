@@ -1,6 +1,6 @@
 # ZwróćTo
 
-Aplikacja mobilna wspomagająca zwrot opakowań wielokrotnego użytku. Użytkownicy mogą lokalizować automaty zwrotne na mapie, śledzić swoje zwroty, zbierać nagrody i zarządzać portfelem punktów i zebranych środków.
+Aplikacja mobilna wspomagająca zwrot opakowań przeznaczonych do recyklingu. Użytkownicy mogą lokalizować automaty zwrotne na mapie, śledzić swoje zwroty, zbierać nagrody i zarządzać portfelem punktów i zebranych środków.
 
 ---
 
@@ -54,18 +54,18 @@ Projekt zbudowany jest w React (Create React App) z podziałem na:
 
 ### Ekrany i odpowiadające im ścieżki React Router
 
-| Ścieżka             | Komponent         | Opis                            |
-| ------------------- | ----------------- | ------------------------------- |
-| `/`                 | redirect → `/map` | Przekierowanie na mapę          |
-| `/map`              | `MapScreen`       | Mapa z automatami zwrotnymi     |
-| `/automaty`         | `MapScreen`       | Alias widoku mapy               |
-| `/login`            | `Login`           | Logowanie użytkownika           |
-| `/register`         | `Register`        | Rejestracja nowego konta        |
-| `/restore_password` | `RestorePassword` | Resetowanie hasła               |
-| `/profile`          | `Profile`         | Profil zalogowanego użytkownika |
-| `/portfel`          | `Portfel`         | Portfel punktów                 |
-| `/nagrody`          | `Nagrody`         | Dostępne nagrody                |
-| `/skanuj-kupon`     | `ScanCoupon`      | Skanowanie kuponu               |
+| Ścieżka             | Komponent         | Opis                             |
+| ------------------- | ----------------- | -------------------------------- |
+| `/`                 | redirect → `/map` | Przekierowanie na mapę           |
+| `/map`              | `MapScreen`       | Mapa z automatami zwrotnymi      |
+| `/automaty`         | `MachinesList`    | Podgląd automatów w formie listy |
+| `/login`            | `Login`           | Logowanie użytkownika            |
+| `/register`         | `Register`        | Rejestracja nowego konta         |
+| `/restore_password` | `RestorePassword` | Resetowanie hasła                |
+| `/profile`          | `Profile`         | Profil zalogowanego użytkownika  |
+| `/portfel`          | `Portfel`         | Portfel punktów                  |
+| `/nagrody`          | `Nagrody`         | Dostępne nagrody                 |
+| `/skanuj-kupon`     | `ScanCoupon`      | Skanowanie kuponu                |
 
 ---
 
@@ -160,10 +160,8 @@ npm start
 
 Aplikacja dostępna pod adresem [http://localhost:3000](http://localhost:3000).
 
-### Budowanie produkcyjne
+### Budowanie wersji produkcyjnej
 
 ```bash
 npm run build
 ```
-
-Pliki wynikowe trafiają do katalogu `build/`.
