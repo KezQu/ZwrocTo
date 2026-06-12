@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../firebase";
@@ -71,7 +71,40 @@ export default function MapScreen() {
   // Hide the FAB while reviewing an expanded machine sheet; otherwise float it
   // just above the visible sheet/card.
   const showFab = !(isMachineSheet && expanded);
-  const fabVariant = isMachineSheet ? "high" : "mid";
+
+  // Position the FAB relative to the actual height of the visible bottom
+  // widget (machine sheet / packaging card) so it always sits just above it —
+  // and just above the nav bar when nothing is selected.
+  const sheetRef = useRef(null);
+  const [fabBottom, setFabBottom] = useState(96);
+
+  useLayoutEffect(() => {
+    const GAP = 14;
+    const BASE = 96; // resting spot above the bottom nav
+
+    const measure = () => {
+      const el = sheetRef.current;
+      if (!el) {
+        setFabBottom(BASE);
+        return;
+      }
+      const top = el.getBoundingClientRect().top;
+      setFabBottom(Math.max(BASE, window.innerHeight - top + GAP));
+    };
+
+    measure();
+    const el = sheetRef.current;
+    let ro;
+    if (el && "ResizeObserver" in window) {
+      ro = new ResizeObserver(measure);
+      ro.observe(el);
+    }
+    window.addEventListener("resize", measure);
+    return () => {
+      if (ro) ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [selection, expanded]);
 
   return (
     <div className="map-screen">
@@ -99,6 +132,7 @@ export default function MapScreen() {
       )}
 
       <BottomSheet
+        ref={sheetRef}
         selection={selection}
         expanded={expanded}
         onToggleExpand={() => setExpanded((v) => !v)}
@@ -116,7 +150,7 @@ export default function MapScreen() {
       {showFab && (
         <Fab
           open={fabOpen}
-          variant={fabVariant}
+          bottom={fabBottom}
           onToggle={() => setFabOpen((v) => !v)}
           onAddCoupon={() => {
             setFabOpen(false);
