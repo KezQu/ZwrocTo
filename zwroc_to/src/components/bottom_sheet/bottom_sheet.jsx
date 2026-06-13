@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useRef, useState } from "react";
 import Chip from "../chip/chip";
 import StarRating from "../star_rating/star_rating";
 import { RouteIcon, RecycleIcon, UserIcon, AlertIcon } from "../icons/icons";
@@ -13,6 +13,9 @@ const RETURN_LABELS = Object.fromEntries(
   RETURN_FORMS.map((t) => [t.id, t.label])
 );
 
+// Height (px) of the sheet that stays visible when collapsed (the "peek").
+const PEEK = 220;
+
 function RouteButton() {
   return (
     <button type="button" className="sheet-route-btn">
@@ -24,7 +27,6 @@ function RouteButton() {
 
 function MachineSheet({
   machine,
-  expanded,
   userRating,
   onRateChange,
   comment,
@@ -94,72 +96,60 @@ function MachineSheet({
         </div>
       </div>
 
-      {expanded && (
-        <>
-          <div className="sheet-section">
-            <p className="sheet-label sheet-label--strong">Lokalizacja:</p>
-            <p className="sheet-text">{machine.location.address}</p>
-            <p className="sheet-text sheet-text--muted">{machine.location.hint}</p>
-          </div>
+      <div className="sheet-section">
+        <p className="sheet-label sheet-label--strong">Lokalizacja:</p>
+        <p className="sheet-text">{machine.location.address}</p>
+        <p className="sheet-text sheet-text--muted">{machine.location.hint}</p>
+      </div>
 
-          <div className="sheet-hours">
-            <p className="sheet-hours__title">Godziny otwarcia</p>
-            {machine.hours.map((h) => (
-              <div key={h.days} className="sheet-hours__row">
-                <span>{h.days}</span>
-                <span className="sheet-hours__time">{h.time}</span>
+      <div className="sheet-hours">
+        <p className="sheet-hours__title">Godziny otwarcia</p>
+        {machine.hours.map((h) => (
+          <div key={h.days} className="sheet-hours__row">
+            <span>{h.days}</span>
+            <span className="sheet-hours__time">{h.time}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="sheet-section sheet-rate">
+        <p className="sheet-rate__title">Twoja ocena automatu</p>
+        <StarRating value={userRating} onChange={onRateChange} size={28} />
+      </div>
+
+      <div className="sheet-section">
+        <p className="sheet-label sheet-label--strong">Zostaw komentarz</p>
+        <textarea
+          className="sheet-textarea"
+          placeholder="Napisz co sądzisz o tym automacie..."
+          value={comment}
+          onChange={(e) => onCommentChange(e.target.value)}
+        />
+        <button type="button" className="sheet-submit" onClick={onSubmitReview}>
+          <RouteIcon size={16} />
+          <span>Dodaj opinię</span>
+        </button>
+      </div>
+
+      {machine.reviews.length > 0 && (
+        <div className="sheet-reviews">
+          {machine.reviews.map((r) => (
+            <div key={r.id} className="sheet-review">
+              <div className="sheet-review__head">
+                <span className="sheet-review__avatar">
+                  <UserIcon size={18} />
+                </span>
+                <span className="sheet-review__author">{r.author}</span>
+                <span className="sheet-review__when">{r.when}</span>
               </div>
-            ))}
-          </div>
-
-          <div className="sheet-section sheet-rate">
-            <p className="sheet-rate__title">Twoja ocena automatu</p>
-            <StarRating value={userRating} onChange={onRateChange} size={28} />
-          </div>
-
-          <div className="sheet-section">
-            <p className="sheet-label sheet-label--strong">Zostaw komentarz</p>
-            <textarea
-              className="sheet-textarea"
-              placeholder="Napisz co sądzisz o tym automacie..."
-              value={comment}
-              onChange={(e) => onCommentChange(e.target.value)}
-            />
-            <button
-              type="button"
-              className="sheet-submit"
-              onClick={onSubmitReview}
-            >
-              <RouteIcon size={16} />
-              <span>Dodaj opinię</span>
-            </button>
-          </div>
-
-          {machine.reviews.length > 0 && (
-            <div className="sheet-reviews">
-              {machine.reviews.map((r) => (
-                <div key={r.id} className="sheet-review">
-                  <div className="sheet-review__head">
-                    <span className="sheet-review__avatar">
-                      <UserIcon size={18} />
-                    </span>
-                    <span className="sheet-review__author">{r.author}</span>
-                    <span className="sheet-review__when">{r.when}</span>
-                  </div>
-                  <StarRating value={r.rating} size={14} />
-                  <p className="sheet-review__text">{r.text}</p>
-                </div>
-              ))}
+              <StarRating value={r.rating} size={14} />
+              <p className="sheet-review__text">{r.text}</p>
             </div>
-          )}
-        </>
+          ))}
+        </div>
       )}
 
-      <button
-        type="button"
-        className="sheet-report-issue"
-        onClick={onReportIssue}
-      >
+      <button type="button" className="sheet-report-issue" onClick={onReportIssue}>
         <AlertIcon size={16} />
         <span>Zgłoś awarię automatu</span>
       </button>
@@ -184,33 +174,98 @@ function PackagingSheet({ report }) {
   );
 }
 
-// Bottom sheet that surfaces the selected map pin. Machine pins get the
-// collapsible detail sheet; packaging pins get the compact card.
+// Bottom sheet for the selected map pin. Machine pins get a draggable detail
+// sheet (peek -> drag up to expand); packaging pins get the compact card.
 const BottomSheet = forwardRef(function BottomSheet(
-  { selection, expanded, onToggleExpand, onClose, reviewState, onReportIssue },
+  { selection, expanded, onExpandedChange, onClose, reviewState, onReportIssue },
   ref
 ) {
+  const innerRef = useRef(null);
+  const drag = useRef(null);
+  const [dragY, setDragY] = useState(null);
+
+  const setRefs = (el) => {
+    innerRef.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) ref.current = el;
+  };
+
   if (!selection) return null;
 
   const isMachine = selection.type === "machine";
 
-  return (
-    <div
-      ref={ref}
-      className={`bottom-sheet${expanded ? " bottom-sheet--expanded" : ""}${
-        isMachine ? "" : " bottom-sheet--compact"
-      }`}
-    >
-      {isMachine && (
+  if (!isMachine) {
+    return (
+      <div ref={setRefs} className="bottom-sheet bottom-sheet--compact">
         <button
           type="button"
-          className="bottom-sheet__handle"
-          onClick={onToggleExpand}
-          aria-label={expanded ? "Zwiń" : "Rozwiń"}
+          className="bottom-sheet__close"
+          onClick={onClose}
+          aria-label="Zamknij"
         >
-          <span className="bottom-sheet__grabber" />
+          ×
         </button>
-      )}
+        <div className="bottom-sheet__content">
+          <PackagingSheet report={selection.data} />
+        </div>
+      </div>
+    );
+  }
+
+  const onPointerDown = (e) => {
+    const el = innerRef.current;
+    if (!el) return;
+    drag.current = {
+      startY: e.clientY,
+      height: el.offsetHeight,
+      base: expanded ? 0 : el.offsetHeight - PEEK,
+      moved: 0,
+    };
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerMove = (e) => {
+    const d = drag.current;
+    if (!d) return;
+    const dy = e.clientY - d.startY;
+    d.moved = dy;
+    const collapsedY = d.height - PEEK;
+    setDragY(Math.max(0, Math.min(collapsedY + 110, d.base + dy)));
+  };
+
+  const onPointerUp = () => {
+    const d = drag.current;
+    drag.current = null;
+    setDragY(null);
+    if (!d) return;
+    const collapsedY = d.height - PEEK;
+    if (Math.abs(d.moved) < 6) {
+      onExpandedChange(!expanded); // treat as a tap
+      return;
+    }
+    const final = d.base + d.moved;
+    if (final > collapsedY + 60) onClose();
+    else if (final < collapsedY * 0.55) onExpandedChange(true);
+    else onExpandedChange(false);
+  };
+
+  return (
+    <div
+      ref={setRefs}
+      className={`bottom-sheet bottom-sheet--machine${
+        expanded ? " bottom-sheet--expanded" : ""
+      }${dragY != null ? " bottom-sheet--dragging" : ""}`}
+      style={dragY != null ? { transform: `translateY(${dragY}px)` } : undefined}
+    >
+      <div
+        className="bottom-sheet__bar"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
+        <span className="bottom-sheet__grabber" />
+      </div>
 
       <button
         type="button"
@@ -222,20 +277,15 @@ const BottomSheet = forwardRef(function BottomSheet(
       </button>
 
       <div className="bottom-sheet__content">
-        {isMachine ? (
-          <MachineSheet
-            machine={selection.data}
-            expanded={expanded}
-            userRating={reviewState.rating}
-            onRateChange={reviewState.setRating}
-            comment={reviewState.comment}
-            onCommentChange={reviewState.setComment}
-            onSubmitReview={reviewState.submit}
-            onReportIssue={onReportIssue}
-          />
-        ) : (
-          <PackagingSheet report={selection.data} />
-        )}
+        <MachineSheet
+          machine={selection.data}
+          userRating={reviewState.rating}
+          onRateChange={reviewState.setRating}
+          comment={reviewState.comment}
+          onCommentChange={reviewState.setComment}
+          onSubmitReview={reviewState.submit}
+          onReportIssue={onReportIssue}
+        />
       </div>
     </div>
   );

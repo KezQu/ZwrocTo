@@ -210,3 +210,42 @@ export function AlertIcon(props) {
     </Svg>
   );
 }
+
+export function TagIcon(props) {
+  return (
+    <Svg {...props}>
+      <path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9Z" />
+      <circle cx="7.5" cy="7.5" r="1.5" />
+    </Svg>
+  );
+}
+
+export function CoffeeIcon(props) {
+  return (
+    <Svg {...props}>
+      <path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z" />
+      <path d="M17 10h2a2.5 2.5 0 0 1 0 5h-2" />
+      <path d="M8 2v2.5M12 2v2.5" />
+    </Svg>
+  );
+}
+
+export function GlobeIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" />
+    </Svg>
+  );
+}
+
+export function GiftIcon(props) {
+  return (
+    <Svg {...props}>
+      <path d="M4 11h16v9H4z" />
+      <path d="M2 7h20v4H2zM12 7v13" />
+      <path d="M12 7S10.5 3 8 3a2 2 0 0 0 0 4Zm0 0s1.5-4 4-4a2 2 0 0 1 0 4Z" />
+    </Svg>
+  );
+}

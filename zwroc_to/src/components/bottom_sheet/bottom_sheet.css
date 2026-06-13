@@ -8,14 +8,24 @@
   border-top-left-radius: var(--radius-card);
   border-top-right-radius: var(--radius-card);
   box-shadow: var(--shadow-sheet);
-  padding: 8px 18px 18px;
-  max-height: 46vh;
-  overflow-y: auto;
-  transition: max-height 0.25s ease;
 }
 
-.bottom-sheet--expanded {
-  max-height: calc(100vh - 150px);
+/* Draggable machine sheet: collapsed shows a peek, drag up to expand. */
+.bottom-sheet--machine {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 150px);
+  overflow: hidden;
+  transform: translateY(calc(100% - 220px));
+  transition: transform 0.34s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.bottom-sheet--machine.bottom-sheet--expanded {
+  transform: translateY(0);
+}
+
+.bottom-sheet--dragging {
+  transition: none;
 }
 
 .bottom-sheet--compact {
@@ -23,17 +33,17 @@
   box-shadow: none;
   bottom: 92px;
   padding: 0 14px;
-  max-height: none;
-  overflow: visible;
 }
 
-.bottom-sheet__handle {
-  display: block;
-  width: 100%;
-  border: none;
-  background: none;
-  padding: 6px 0 10px;
-  cursor: pointer;
+.bottom-sheet__bar {
+  flex: none;
+  padding: 12px 0 8px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.bottom-sheet__bar:active {
+  cursor: grabbing;
 }
 
 .bottom-sheet__grabber {
@@ -43,28 +53,45 @@
   border-radius: 999px;
   background: var(--green-soft);
   margin: 0 auto;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .bottom-sheet__close {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 14px;
   border: none;
   background: var(--green-50);
   color: var(--text-muted);
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 
 .bottom-sheet--compact .bottom-sheet__close {
   top: -6px;
   right: 6px;
+}
+
+.bottom-sheet__content {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 18px 18px;
+}
+
+.bottom-sheet--expanded .bottom-sheet__content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.bottom-sheet--compact .bottom-sheet__content {
+  overflow: visible;
+  padding: 0;
 }
 
 /* Rows */

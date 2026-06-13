@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AppHeader from "../../components/app_header/app_header";
 import BottomNav from "../../components/bottom_nav/bottom_nav";
-import ReportIssueForm from "../../components/report_issue_form/report_issue_form";
+import { TagIcon, PlusIcon, RecycleIcon } from "../../components/icons/icons";
 import "./portfel.css";
 
 export default function Portfel() {
+  const navigate = useNavigate();
+
   const [coupons] = useState([
-    { id: 1, name: "DINO", price: "4,00 zł", icon: "🦖" },
-    { id: 2, name: "Biedronka", price: "2,00 zł", icon: "🐞" },
+    { id: 1, name: "DINO", price: "4,00 zł", icon: <TagIcon size={26} /> },
+    { id: 2, name: "Biedronka", price: "2,00 zł", icon: <TagIcon size={26} /> },
   ]);
 
   const [transactions] = useState([
@@ -34,8 +37,6 @@ export default function Portfel() {
     },
   ]);
 
-  const [showAddCouponModal, setShowAddCouponModal] = useState(false);
-
   return (
     <div className="portfel-page">
       <AppHeader />
@@ -46,8 +47,11 @@ export default function Portfel() {
             <h2 className="balance-label">ODZYSKANE ŚRODKI</h2>
             <p className="balance-amount">142,50 <span className="currency">zł</span></p>
           </div>
-          <button className="primary-button" onClick={() => setShowAddCouponModal(true)}>
-            <span>➕</span> Dodaj kupon
+          <button
+            className="primary-button"
+            onClick={() => navigate("/skanuj-kupon")}
+          >
+            <PlusIcon size={18} /> Dodaj kupon
           </button>
         </section>
 
@@ -82,7 +86,9 @@ export default function Portfel() {
             {transactions.map((transaction) => (
               <div key={transaction.id} className="transaction-item">
                 <div className="transaction-left">
-                  <div className="transaction-icon"></div>
+                  <div className="transaction-icon">
+                    <RecycleIcon size={20} />
+                  </div>
                   <div className="transaction-info">
                     <h4 className="transaction-type">{transaction.type}</h4>
                     <p className="transaction-location">{transaction.location}</p>
@@ -98,21 +104,6 @@ export default function Portfel() {
         </section>
       </main>
       <BottomNav />
-
-      {showAddCouponModal && (
-        <ReportIssueForm
-          onClose={() => setShowAddCouponModal(false)}
-          onSubmit={(payload) => {
-            console.log("Nowy kupon:", payload);
-            setShowAddCouponModal(false);
-          }}
-          title="Wprowadź kupon"
-          label="Kod kuponu"
-          placeholder="Wpisz kod kuponu..."
-          showIcon={false}
-          showMachineInfo={false}
-        />
-      )}
     </div>
   );
 }

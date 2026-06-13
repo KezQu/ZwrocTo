@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AppHeader from "../../components/app_header/app_header";
 import BottomNav from "../../components/bottom_nav/bottom_nav";
+import { LeafIcon, CoffeeIcon, GlobeIcon } from "../../components/icons/icons";
 import "./nagrody.css";
 
 export default function Nagrody() {
@@ -12,7 +13,7 @@ export default function Nagrody() {
       points: "150 pkt",
       isSpotlight: true,
       badge: "POPULARNE",
-      icon: "🌱",
+      icon: <LeafIcon size={30} />,
     },
     {
       id: 2,
@@ -22,7 +23,7 @@ export default function Nagrody() {
       points: "50 pkt",
       isSpotlight: false,
       badge: "DOSTĘPNE",
-      icon: "☕",
+      icon: <CoffeeIcon size={30} />,
     },
   ]);
 
@@ -42,7 +43,9 @@ export default function Nagrody() {
               świat. Zbieraj punkty i wymień je na nagrody lub wspomóż środowisko.
             </p>
             <div className="hero-card">
-              <div className="hero-icon">🌍</div>
+              <div className="hero-icon">
+                <GlobeIcon size={28} />
+              </div>
               <div className="hero-info">
                 <p className="hero-label">TWÓJ WKŁAD</p>
                 <p className="hero-value">+250</p>

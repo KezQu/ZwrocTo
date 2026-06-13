@@ -1,4 +1,11 @@
-import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
+import { useEffect, useRef } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  useMapEvents,
+  useMap,
+} from "react-leaflet";
 import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import "leaflet/dist/leaflet.css";
@@ -46,10 +53,28 @@ function MapClickHandler({ onDeselect }) {
   return null;
 }
 
+// Smoothly recenters the map on the selected pin, lifted upward so it isn't
+// hidden behind the bottom sheet.
+function FocusOnSelect({ position }) {
+  const map = useMap();
+  const first = useRef(true);
+  useEffect(() => {
+    if (!position) return;
+    const zoom = map.getZoom();
+    const lift = map.getSize().y * 0.18;
+    const target = map.unproject(map.project(position, zoom).add([0, lift]), zoom);
+    map.flyTo(target, zoom, { duration: first.current ? 0 : 0.5 });
+    first.current = false;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [position && position[0], position && position[1]]);
+  return null;
+}
+
 export default function ReturnMap({
   machines = [],
   packagingReports = [],
   center = WADOWICE_CENTER,
+  focus,
   selectedType,
   selectedId,
   onSelectMachine,
@@ -69,6 +94,7 @@ export default function ReturnMap({
       />
 
       <MapClickHandler onDeselect={onDeselect} />
+      <FocusOnSelect position={focus} />
 
       {machines.map((m) => {
         const selected = selectedType === "machine" && selectedId === m.id;

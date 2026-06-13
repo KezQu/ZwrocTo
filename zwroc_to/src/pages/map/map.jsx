@@ -81,7 +81,20 @@ export default function MapScreen() {
   useLayoutEffect(() => {
     const GAP = 14;
     const BASE = 96; // resting spot above the bottom nav
+    const NAV = 78; // sheet bottom offset (above nav)
+    const PEEK = 220; // collapsed machine sheet peek height (matches CSS)
 
+    if (!selection) {
+      setFabBottom(BASE);
+      return;
+    }
+    // The machine sheet is CSS-transformed (translateY); measuring it mid
+    // animation is unreliable, so the collapsed peek height is a constant.
+    if (selection.type === "machine") {
+      setFabBottom(NAV + PEEK + GAP);
+      return;
+    }
+    // Packaging card isn't transformed — measure it so the FAB sits above it.
     const measure = () => {
       const el = sheetRef.current;
       if (!el) {
@@ -91,19 +104,9 @@ export default function MapScreen() {
       const top = el.getBoundingClientRect().top;
       setFabBottom(Math.max(BASE, window.innerHeight - top + GAP));
     };
-
     measure();
-    const el = sheetRef.current;
-    let ro;
-    if (el && "ResizeObserver" in window) {
-      ro = new ResizeObserver(measure);
-      ro.observe(el);
-    }
     window.addEventListener("resize", measure);
-    return () => {
-      if (ro) ro.disconnect();
-      window.removeEventListener("resize", measure);
-    };
+    return () => window.removeEventListener("resize", measure);
   }, [selection, expanded]);
 
   return (
@@ -115,6 +118,7 @@ export default function MapScreen() {
           machines={machines}
           packagingReports={packagingReports}
           center={mapCenter}
+          focus={selection?.data?.coords}
           selectedType={selection?.type}
           selectedId={selection?.data?.id}
           onSelectMachine={selectMachine}
@@ -135,7 +139,7 @@ export default function MapScreen() {
         ref={sheetRef}
         selection={selection}
         expanded={expanded}
-        onToggleExpand={() => setExpanded((v) => !v)}
+        onExpandedChange={setExpanded}
         onClose={() => setSelection(null)}
         reviewState={{
           rating,

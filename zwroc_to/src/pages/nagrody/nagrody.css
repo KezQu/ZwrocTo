@@ -9,10 +9,10 @@
   padding: 0 0 128px;
   position: relative;
   width: 100%;
-  max-width: 390px;
+  max-width: 480px;
   margin: 0 auto;
   min-height: 100vh;
-  background: linear-gradient(0deg, #ddffe2, #ddffe2), #ffffff;
+  background: var(--green-50);
 }
 
 /* ============================================
@@ -130,13 +130,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 21px;
-  height: 21px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   background: #176a21;
+  color: #fff;
   flex: none;
   order: 0;
   flex-grow: 0;
-  font-size: 24px;
 }
 
 .hero-info {
@@ -288,11 +289,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  font-size: 32px;
+  width: 44px;
+  height: 44px;
+  color: #fff;
   background: #176a21;
-  border-radius: 8px;
+  border-radius: 12px;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -396,7 +397,7 @@
   left: 0;
   right: 0;
   z-index: 2;
-  max-width: 390px;
+  max-width: 480px;
   margin: 0 auto;
   width: 100%;
 }
@@ -407,7 +408,7 @@
 
 @media (max-width: 640px) {
   .nagrody-main-content {
-    padding: 32px 16px;
+    padding: 88px 16px 120px;
     gap: 64px;
   }
 
