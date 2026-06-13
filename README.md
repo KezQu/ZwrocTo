@@ -38,9 +38,9 @@ Aplikacja mobilna wspomagająca zwrot opakowań przeznaczonych do recyklingu. U�
 
 ![Nagrody](docs/screenshots/nagrody.png)
 
-### Skanowanie kuponu
+### Dodawanie kuponów, zgłoszeń, automatów
 
-![Skanowanie kuponu](docs/screenshots/scan_coupon.png)
+![Formularze](docs/screenshots/forms.png)
 
 ---
 
